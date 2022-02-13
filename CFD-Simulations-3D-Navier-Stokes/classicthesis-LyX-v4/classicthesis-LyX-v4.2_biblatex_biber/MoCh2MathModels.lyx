@@ -1,0 +1,2617 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass classicthesis
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Mathematical Models
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The Navier-Stokes equations are the governing equations for viscous fluids
+ in motion 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "white2006viscous,kundu2012fluid"
+
+\end_inset
+
+.
+ These equations are systems of nonlinear partial differential equations
+ and a statement of Newton’s second law, where the forces are modeled according
+ to those in a viscous Newtonian fluid; stating that the sum of the inertial
+ forces is equal to the sum of external forces.
+ These equations dictates the velocity rather than the position.
+ It follows that a solution of the Navier-Stokes is the velocity field.
+ Once the velocity field is solved, other quantities may be found, such
+ as flow rate, pressure, drag force and so on.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/illustratorPS/MatVol.eps
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Control volume
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Control-volume"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+In the forthcoming sections we will derive the governing equations and formulate
+ the boundary and initial conditions used in the experiment.
+ Before deriving these equations, there are some important assumptions to
+ be underlined.
+ Firstly, the control volume we use to derive the equations is a moving
+ control volume fig.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Control-volume"
+
+\end_inset
+
+), meaning that it will not experience momentum and flux through its boundaries.
+ Second, we assume that all the fields of interest like velocity, pressure,
+ temperature, and density are differentiable, 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+weakly at least
+\end_layout
+
+\end_inset
+
+.
+ By these assumptions the Reynolds transport theorem holds for an 
+\begin_inset Formula $f$
+\end_inset
+
+ differentiable function defined as:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\int_{V(t)}f(\boldsymbol{x},t)dV(t)=\int_{V(t)}\frac{\partial}{\partial t}f(\boldsymbol{x},t)dV(t)+\int_{S(t)}f(\boldsymbol{x},t)\boldsymbol{u}\cdot\boldsymbol{n}dS\label{eq:RenoldsTransportTheorem}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\boldsymbol{u}=(u,v,w)$
+\end_inset
+
+ is the velocity vector, 
+\begin_inset Formula $\boldsymbol{n}=(n_{x},n_{y},n_{z})$
+\end_inset
+
+ is the normal vector, 
+\begin_inset Formula $\boldsymbol{x}=(x,y,z)$
+\end_inset
+
+ the positional vector, 
+\begin_inset Formula $V(t)$
+\end_inset
+
+ is the volume of the domain and 
+\begin_inset Formula $S(t)$
+\end_inset
+
+ its surface.
+ 
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Conservation Of Mass: The Continuity Equation
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Consider fig.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Control-volume"
+
+\end_inset
+
+) with density 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ By mass conservation states that the total change of mass over some given
+ time must be zero.
+ 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\int_{\Omega(t)}\rho d\Omega(t)=0
+\]
+
+\end_inset
+
+By applying the Reynolds transport theorem we get
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\int_{\Omega(t)}\rho d\Omega(t)=\int\frac{\partial}{\partial t}\rho d\Omega(t)+\int_{\partial\Omega(t)}\rho\boldsymbol{u}\cdot\boldsymbol{n}dS=0\label{eq:ReynoldsMass}
+\end{equation}
+
+\end_inset
+
+We can now use Gauss theorem on the surface integral, which relates the
+ outward flux of the vector field through the closed surface 
+\begin_inset Formula $S$
+\end_inset
+
+ , to the volume integral of the divergence over the region inside the surface.
+ In other words
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\int_{\partial\Omega(t)}\rho\boldsymbol{u}\cdot\boldsymbol{n}dS=\int_{\Omega(t)}\rho\nabla\cdot\boldsymbol{u}dV
+\]
+
+\end_inset
+
+Substituting this into eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ReynoldsMass"
+
+\end_inset
+
+) we get the continuity equation in its general form:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula 
+\[
+\int\frac{\partial\rho}{\partial t}+\rho\nabla\cdot\boldsymbol{u}dV(t)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula 
+\[
+\Downarrow
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\frac{\partial\rho}{\partial t}+\rho\nabla\cdot\boldsymbol{u}dV(t)=0
+\]
+
+\end_inset
+
+For fluids with constant density 
+\begin_inset Formula $\rho$
+\end_inset
+
+, we end up with the continuity equation for an incompressible fluid
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\nabla\cdot\boldsymbol{u}=0\label{eq:ContinuityEquation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Conservation Of Momentum: The Navier-Stokes Equation
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+We use the same principle for the derivation of the momentum equation.
+ Newtons second law of motion states that the sum of external forces 
+\begin_inset Formula $\boldsymbol{F}$
+\end_inset
+
+ acting on an object is equal to the product of its mass 
+\begin_inset Formula $m$
+\end_inset
+
+ and its acceleration
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Note that both the sum of external forces 
+\begin_inset Formula $\boldsymbol{F}$
+\end_inset
+
+ and acceleration 
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+ is a vector sum.
+ Any bold notation hereafter indicates that we are dealing with a vector,
+ unless something else is spesified.
+\end_layout
+
+\end_inset
+
+ : 
+\begin_inset Formula $\sum\boldsymbol{F}=m\boldsymbol{a}.$
+\end_inset
+
+ In terms of time derivative we get
+\begin_inset Formula 
+\[
+\sum\boldsymbol{F}=\frac{d}{dt}\int_{\Omega(t)}\rho\boldsymbol{u}d\Omega(t)
+\]
+
+\end_inset
+
+Now we can apply the Reynolds transport theorem on the latter equation and
+ perform integration by parts on the surface integral.
+ We also apply the Gauss theorem to relate the surface integral to the volume
+ integral.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\int_{\Omega(t)}\rho\boldsymbol{u}d\Omega(t) & = & \int_{\Omega(t)}\frac{\partial(\rho\boldsymbol{u})}{\partial t}d\Omega(t)+\int_{\partial\Omega(t)}(\boldsymbol{u}\cdot\boldsymbol{n})\rho\boldsymbol{u}dS\nonumber \\
+ & = & \int_{\Omega(t)}\frac{\partial(\rho\boldsymbol{u})}{\partial t}d\Omega(t)+\int_{\Omega(t)}\rho\boldsymbol{u}\cdot\nabla\boldsymbol{u}+\rho(\nabla\cdot\boldsymbol{u})\boldsymbol{u}d\Omega(t)\nonumber \\
+ & = & \int_{V(t)}\rho\frac{\partial\boldsymbol{u}}{\partial t}+\rho\boldsymbol{u}\cdot\nabla\boldsymbol{u}dV(t)\label{eq:ReynoldsLhsNS}
+\end{eqnarray}
+
+\end_inset
+
+where the continuity equation is used 
+\begin_inset Formula $\nabla\cdot\boldsymbol{u}=0$
+\end_inset
+
+ on the last term.
+ The latter equation is only the inertial part of the momentum equation.
+ The inertial forces must be equal to the external forces acting on the
+ fluid, which includes the viscous forces 
+\begin_inset Formula $\sigma(\boldsymbol{u},p)=2\mu\epsilon(\boldsymbol{u})-pI$
+\end_inset
+
+ and body forces 
+\begin_inset Formula $\boldsymbol{f}$
+\end_inset
+
+ e.g gravity.
+ The strain tensor is defined as 
+\begin_inset Formula $\epsilon(\boldsymbol{u})=\frac{1}{2}(\nabla\boldsymbol{u}+\nabla\boldsymbol{u}^{T})$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\sum\boldsymbol{F}=\int_{\Omega(t)}\boldsymbol{f}d\Omega+\int_{\partial\Omega(t)}\sigma\cdot\boldsymbol{n}dS
+\]
+
+\end_inset
+
+Again we use the Gauss theorem to get
+\begin_inset Formula 
+\begin{equation}
+\sum\boldsymbol{F}=\int_{\Omega(t)}\boldsymbol{f}+2\mu\epsilon(\boldsymbol{u})-\nabla pdV(t)\label{eq:rhsReynoldsNS}
+\end{equation}
+
+\end_inset
+
+With eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ReynoldsLhsNS"
+
+\end_inset
+
+) equals to eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rhsReynoldsNS"
+
+\end_inset
+
+) we get the Navier-Stokes equation for an incompressible fluid
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot\nabla)\boldsymbol{u}=-\nabla p+\nu\nabla^{2}\boldsymbol{u}+\boldsymbol{f}\label{eq:NavierStoke}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The continuity equation eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ContinuityEquation"
+
+\end_inset
+
+) and the Navier-Stokes equation eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NavierStoke"
+
+\end_inset
+
+) are commonly referred to as the the Navier-Stokes equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "langtangen2002numerical"
+
+\end_inset
+
+, and will hereafter be termed according to this terminology.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Boundary and Initial Conditions
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The initial conditions prescribes the initial state of the velocity 
+\begin_inset Formula $\boldsymbol{u}$
+\end_inset
+
+ which will soon be covered, while the boundary conditions may be of several
+ types.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Boundary Conditions
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+There are three common choices of boundary conditions and can generally
+ be stated as follows:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Dirichlet condition: prescribed velocity components
+\begin_inset Formula 
+\begin{equation}
+\mathcal{B}_{i}=u-g\label{eq:Dirichlet}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Neumann condition: vanishing normal derivatives of the velocity components
+\begin_inset Formula 
+\begin{equation}
+\mathcal{B}_{i}=-\alpha\frac{du}{dx}-g\label{eq:Neumann}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Robin condition: prescribed stress vector components
+\begin_inset Formula 
+\begin{equation}
+\mathcal{B}_{i}=-\alpha\frac{du}{dx}-H(u-g)\label{eq:Robin}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+where 
+\begin_inset Formula $H$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ are quantities to be specified.
+ The Dirichlet condition eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Dirichlet"
+
+\end_inset
+
+) specifies a value for the velocity, say 
+\begin_inset Formula $u(0,t)=u(L,t)=A$
+\end_inset
+
+ or a known variation 
+\begin_inset Formula $u_{x}(L,t)=B$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ For a no-slip condition 
+\begin_inset Formula $A=0$
+\end_inset
+
+.
+ The Neumann condition specifies the normal vector or the flux out of the
+ boundary 
+\begin_inset Formula $\frac{\partial u}{\partial n}=\boldsymbol{n}\cdot\nabla u$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HPLWave"
+
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\frac{\partial u}{\partial n}=0$
+\end_inset
+
+ we have a homogenous Neumann condition which basically is a Dirichlet condition.
+ The above mentioned BC's can also be combined in a way that suits a problem
+ specific boundary condition where also the pressure may be involved.
+ This combination will be one of the major topics this thesis.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang english
+Resistance Boundary Condition (RBC)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The easiest way to model the outflow would be to apply a zero traction boundary
+ condition at the outlets 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "logg2012automated"
+
+\end_inset
+
+.
+ However, in a bifurcation the flow division is only dependent on the downstream
+ flow, and the zero traction condition does not capture this very well.
+ This type of BC is reasonable for simulations of flows in a domain with
+ a single outlet but also for steady flow simulations with multiple outlets,
+ given that the pressure at each outlet is known from measurements 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "grinberg2008outflow"
+
+\end_inset
+
+.
+ In unsteady flow simulations with multiple junctions, fixing the pressure
+ at the outlets provides physiologically incorrect results.
+ Since the details of the velocity and the pressure from the experiment
+ are not known, we may model the pressure at the outlets by resistance boundary
+ condition (RBC) in conjunction with Neumann condition for the velocity.
+ The value of the RBC is proportional to the flow, we may therefor model
+ the pressure at the outlet 
+\begin_inset Formula $\Gamma_{out,i}$
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+p_{i}=p_{0}+R=p_{0}+C\int u_{i}\cdot\boldsymbol{n}\textrm{ds}_{i}\label{eq:RBC}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{eqnarray}
+p_{out1} & = & p_{0}+C\int u\cdot\boldsymbol{n}\textrm{ds}_{1}\label{eq:RBC2}\\
+p_{out2} & = & p_{0}+C\int u\cdot\boldsymbol{n}\textrm{ds}_{2}\label{eq:RBC3}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Where 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ is the mean intracranial arterial pressure 
+\begin_inset Formula $(85\textrm{mmHg})$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+ is the resistance coefficient, 
+\begin_inset Formula $u$
+\end_inset
+
+ is the velocity, 
+\begin_inset Formula $\boldsymbol{n}$
+\end_inset
+
+ is the outwards normal vector and 
+\begin_inset Formula $\textrm{ds}_{i}$
+\end_inset
+
+ is the length or the area of the outlets.
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ is usually taken according to a table and depends on the peripheral of
+ the arteries.
+ From eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:RBC"
+
+\end_inset
+
+) we recognize that the RBC is based on the assumption of linear dependency
+ between the pressure and the velocity at each outlet.
+ Application of RBC in rigid walled domains may cause numerical instabilities
+ because the velocity fluctuations at all frequencies are transferred to
+ the pressure oscillations.
+ The RBC in this form eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:RBC"
+
+\end_inset
+
+) is a model used in computational hemodynamics e.g blood flow in arteries.
+ However, since we are trying to emulate an experiment where the fluid is
+ water seeded with tiny particles, we may modify this equation in a way
+ that is appropriate to the experiment.
+ In the numerical section, we will go much deeper into how the RBC behaves.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+One must be aware of phase shifting in pressure waves at the outlets.
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+RBC has its origin from electrical circuits governed by Ohm's law
+\begin_inset Formula 
+\[
+V=IR
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I$
+\end_inset
+
+ is the current through the conductor in units of amperes, V is the potential
+ difference measured across the conductor in units of volts, and R is the
+ resistance of the conductor in units of ohms.
+ More specifically, Ohm's law states that the R in this relation is constant,
+ independent of the curren
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+From a computational point of view, prescribing a constant pressure at each
+ outlet is the least complicated.
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/div/120px-OhmsLaw.svg.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Initial Conditions
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+In the experiment, both stationary and pulsatile flows was generated.
+ For the stationary case a fully developed Poiseuille flow will be used
+ at the inlet, eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:VelocityProfile2D"
+
+\end_inset
+
+) in 2D and eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:VelocityProfile3D"
+
+\end_inset
+
+) in 3D, which will be clarified soon, but first we will investigate in
+ the pulsatile initial condition.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+For the pulsatile flow a dimensionless number called the Womersley number
+ will be used.
+ This number relates the transient forces to viscous forces
+\begin_inset Formula 
+\[
+\alpha^{2}=\frac{\textrm{transient}}{\textrm{viscous}}=\frac{\omega U}{\nu U/L^{2}}=\frac{\omega L^{2}}{\nu}=\frac{\omega D_{h}^{2}}{\nu}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\nu$
+\end_inset
+
+ is the kinematic viscosity, 
+\begin_inset Formula $D_{h}$
+\end_inset
+
+ the hydraulic diameter defined as 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+D_{h}=\frac{2ab}{a+b}=\frac{2\cdot400\cdot185}{400+185}=253\mu m\label{eq:HydraulicDiameter}
+\end{equation}
+
+\end_inset
+
+The angular frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+expressed in terms of microhertz 
+\begin_inset Formula 
+\begin{equation}
+\omega=\frac{2\pi}{T}=2\pi f\label{eq:AngularFrequency}
+\end{equation}
+
+\end_inset
+
+In the experiment two different frequencies 
+\begin_inset Formula $f$
+\end_inset
+
+ where used
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\alpha_{1\mu Hz}=D_{h}\sqrt{\frac{\omega}{\nu}}=253\sqrt{\frac{2\pi\cdot1\mu\textrm{Hz}}{1.004\frac{\mu\textrm{m}^{2}}{\mu\textrm{s}}}}=0.633
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\alpha_{2\mu Hz}=D_{h}\sqrt{\frac{\omega}{\nu}}=253\sqrt{\frac{2\pi\cdot2\mu\textrm{Hz}}{1.004\frac{\mu\textrm{m}^{2}}{\mu\textrm{s}}}}=0.895
+\]
+
+\end_inset
+
+It turns out that when 
+\begin_inset Formula $\alpha<1$
+\end_inset
+
+, the flow predicts the pressure gradients very well and exhibit a parabolic
+ shape such that the oscillating fluid has the largest amplitude farthest
+ away from the wall, which is characterized as a 
+\emph on
+quasi-steady
+\emph default
+ behavior 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "loudon1998use"
+
+\end_inset
+
+.
+ With 
+\begin_inset Formula $\alpha>1$
+\end_inset
+
+ the velocity profile is no longer parabolic and the flow is phase-shifted
+ relative to the oscillating pressure gradients and the amplitude of the
+ fluid may either decrease or increase.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Consider a periodic pressure gradient on the form 
+\begin_inset Formula 
+\[
+\frac{\partial p}{\partial x}=-A\textrm{e}^{i\omega t}=-A\left(\cos(\omega t)+i\sin(\omega t)\right)
+\]
+
+\end_inset
+
+where the frequency is defined in eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:AngularFrequency"
+
+\end_inset
+
+), the constant 
+\begin_inset Formula $A$
+\end_inset
+
+ is real and 
+\begin_inset Formula $i=\sqrt{-1}$
+\end_inset
+
+.
+ The solution for the velocity field in this case in complex form is given
+ as
+\begin_inset Formula 
+\begin{equation}
+u(y,t)=\frac{A}{i\omega\rho}\left[1-\frac{\cosh\left(\frac{\alpha y\sqrt{i}}{a}\right)}{\cosh\left(\alpha\sqrt{i}\right)}\right]\textrm{e}^{i\omega t}\label{eq:VelocityProfileComplex}
+\end{equation}
+
+\end_inset
+
+We must discard the imaginary components and solve for the real part, where
+ the real part of eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:VelocityProfileComplex"
+
+\end_inset
+
+) is 
+\begin_inset Formula 
+\begin{eqnarray}
+u(y,t) & = & \frac{A}{i\omega\gamma}\{[\sinh\boldsymbol{\Phi}_{1}(y)\sin\boldsymbol{\Phi}_{2}(y)\nonumber \\
+ &  & +\sinh\boldsymbol{\Phi}_{2}(y)\sin\boldsymbol{\Phi}_{1}(y)]\cos(\omega t)\label{eq:VelocityProfileReal}\\
+ &  & +[\gamma-\cosh\boldsymbol{\Phi}_{1}(y)\cos\boldsymbol{\Phi}_{2}(y)\nonumber \\
+ &  & -\cosh\boldsymbol{\Phi}_{2}(y)\cos\boldsymbol{\Phi}_{1}(y)]\sin(\omega t)\}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\Phi}_{1}(y)=\frac{\alpha}{\sqrt{2}}\left(1+\frac{y}{a}\right),\qquad\boldsymbol{\Phi}_{2}(y)=\frac{\alpha}{\sqrt{2}}\left(1-\frac{y}{a}\right)\label{eq:PhiBold}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\gamma=\cosh\left(\alpha\sqrt{2}\right)+\cos\left(\alpha\sqrt{2}\right)\label{eq:gammaReal}
+\end{equation}
+
+\end_inset
+
+The amplitude 
+\begin_inset Formula $u_{max}$
+\end_inset
+
+ for this oscillating velocity is
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{max} & = & \frac{A}{i\omega\rho}\{[\sinh\boldsymbol{\Phi}_{1}(y)\sin\boldsymbol{\Phi}_{2}(y)+\sinh\boldsymbol{\Phi}_{2}(y)\sin\boldsymbol{\Phi}_{1}(y)]^{2}\\
+ &  & +[\gamma-\cosh\boldsymbol{\Phi}_{1}(y)\cos\boldsymbol{\Phi}_{2}(y)-\cosh\boldsymbol{\Phi}_{2}(y)\cos\boldsymbol{\Phi}_{1}(y)]^{2}\}^{\frac{1}{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Poiseuille Flow 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+A flow generated by a pressure gradient is called Poiseuille flow named
+ after french physician J.L.M Poiseuille(1840) who experimented with laminar
+ and steady flow in tubes.
+ When the flow is settled as we get far enough from its entrance, the velocity
+ becomes axial and varies only with the lateral axis, and the flow is then
+ called fully developed 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "white2006viscous"
+
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $u=u(y,z)$
+\end_inset
+
+, 
+\begin_inset Formula $v=w=0$
+\end_inset
+
+, and 
+\begin_inset Formula $\frac{\partial}{\partial x}=0$
+\end_inset
+
+.
+ These conditions reduces the mass and momentum equations to
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+0=-\frac{dp}{dx}+\mu\left(\frac{\partial^{2}u}{\partial y^{2}}+\frac{\partial^{2}u}{\partial z^{2}}\right)\label{eq:Poiseuille}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+0=-\frac{dp}{dy}=-\frac{dp}{dz}
+\]
+
+\end_inset
+
+Indicating that the pressure is only a function of 
+\begin_inset Formula $x$
+\end_inset
+
+ for the fully developed Poiseuille flow.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+2D Velocity Profile
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+In 2D we have that 
+\begin_inset Formula $\frac{\partial u}{\partial z}=0$
+\end_inset
+
+, which reduces the momentum equation further to a Poisson equation
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial^{2}u}{\partial y^{2}}=\frac{1}{\mu}\frac{dp}{dx}=\beta\label{eq:Poiseuille2D}
+\end{equation}
+
+\end_inset
+
+Where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a constant pressure gradient.
+ By integrating the Laplacian term twice and apply the boundary conditions
+ 
+\begin_inset Formula $u(y\pm h)=0$
+\end_inset
+
+, and optionally 
+\begin_inset Formula $u(0)=u_{max}$
+\end_inset
+
+ we obtain an analytical solution for the problem in 2D.
+ The latter boundary condition is strictly not necessary since we have a
+ second order PDE in space, we only need two BC's to solve the PDE, but
+ we will use it anyway to lump parameters and express the final solution
+ in terms of 
+\begin_inset Formula $u_{max}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial y}=\beta y+A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+u(y)=\frac{1}{2}\beta y^{2}+Ay+B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+BC:
+\begin_inset Formula 
+\[
+u(\pm h)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+u(h)=\frac{1}{2}\beta h^{2}+Ah+B=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+u(-h)=\frac{1}{2}\beta h^{2}-Ah+B=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+A=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+B=-\frac{1}{2}\beta h^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+u(0)=u_{max}=-\frac{1}{2}\beta h^{2}=-\frac{h^{2}}{2\mu_{d}}\frac{dp}{dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+u(y)=u_{maks}(1-\frac{y^{2}}{h^{2}})\label{eq:VelocityProfile2D}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $h=200$
+\end_inset
+
+.
+ This expression is as initial condition at the inflow for the 2D stationary
+ simulation.
+ The parabolic inflow profiles for different Re
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $\textrm{Re}=2.2$
+\end_inset
+
+ is exaggerated by 
+\begin_inset Formula $10\times$
+\end_inset
+
+ , only to be visible in the plot.
+ 
+\end_layout
+
+\end_inset
+
+ numbers are illustrated in fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Parabolic-velocity-profiles"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset space \hspace{}
+\length -1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/plots/2Dparabolic.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Parabolic velocity profiles in 2D 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Parabolic-velocity-profiles"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+3D Velocity Profile
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The analytical solution in 3D for a developed flow in a rectangular duct
+ fig.?, is much more complicated.
+ The problem will be solved by Fourier analysis and only cosine functions
+ are involved, since they guarantee that the no-slip condition is fulfilled.
+ We will Fourier expand in the 
+\begin_inset Formula $y$
+\end_inset
+
+- direction such that 
+\begin_inset Formula $u(\pm a,z)=0$
+\end_inset
+
+.
+ Furthermore, we assume that the solution to the Navier-Stokes equation
+ has the form 
+\begin_inset Formula 
+\begin{equation}
+u(y,z)=\sum_{n=1}^{\infty}f_{n}(z)\cos(n\pi\frac{y}{2a})\label{eq:FourierNS}
+\end{equation}
+
+\end_inset
+
+Substituting this equation into eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Poiseuille"
+
+\end_inset
+
+): 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}u}{\partial y^{2}}+\frac{\partial^{2}u}{\partial z^{2}} & = & \frac{dp}{\mu dx}\\
+ & \Downarrow
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\left[\frac{\partial^{2}f_{n}(z)}{\partial z^{2}}-f_{n}(z)\left(\frac{n\pi}{2a}\right)^{2}\right]\cos(n\pi\frac{y}{2a})=\frac{dp}{\mu dx}
+\]
+
+\end_inset
+
+We also need to Fourier transform the constant 
+\begin_inset Formula $\frac{dp}{\mu dx}$
+\end_inset
+
+, or simpler, just the constant 
+\begin_inset Formula $1$
+\end_inset
+
+ that can be multiplied by any constant.
+ 
+\begin_inset Formula 
+\[
+\frac{dp}{\mu dx}=\frac{dp}{\mu dx}\times1=\frac{dp}{\mu dx}\frac{4}{\pi}\sum_{n,odd}^{\infty}\frac{1}{n}\cos(n\pi\frac{y}{2a})
+\]
+
+\end_inset
+
+The solution is valid only if
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+f_{n}(z)=0\qquad\textrm{for n even}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial^{2}f_{n}(z)}{\partial z^{2}}-f_{n}(z)\left(\frac{n\pi}{2a}\right)^{2}=\frac{dp}{\mu dx}\frac{4}{n\pi}\qquad\textrm{for n odd}\label{eq:NonHomo}
+\end{equation}
+
+\end_inset
+
+Now we have a non-homogenous solution with 
+\begin_inset Formula $f_{n}(z)_{h}$
+\end_inset
+
+ homogenous and 
+\begin_inset Formula $f_{n}(z)_{p}$
+\end_inset
+
+ the particular solution: 
+\begin_inset Formula 
+\begin{equation}
+f_{n}(z)=f_{n}(z)_{h}+f_{n}(z)_{p}\label{eq:GenNonHomo}
+\end{equation}
+
+\end_inset
+
+First we seek a general solution of the homogenous term 
+\begin_inset Formula $f_{n}(z)_{h}$
+\end_inset
+
+.
+ The characteristic solution of this is 
+\begin_inset Formula 
+\[
+\lambda^{2}-\left(\frac{n\pi}{2a}\right)^{2}\lambda=0
+\]
+
+\end_inset
+
+with roots 
+\begin_inset Formula $\lambda_{1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}=\frac{n\pi}{2a}$
+\end_inset
+
+, which leads to the real general solution of the homogenous equation 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+f_{n}(z)_{h}=A\textrm{e}^{z\lambda_{1}}+B\textrm{e}^{z\lambda_{2}}
+\]
+
+\end_inset
+
+By using the definition of hyperbolic functions
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\sinh(z)=\frac{\textrm{e}^{z}-\textrm{e}^{-z}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\cosh(z)=\frac{\textrm{e}^{z}+\textrm{e}^{-z}}{2}
+\]
+
+\end_inset
+
+the general solution of the homogenous term can be rewritten as
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+f_{n}(z)_{h}=A\sinh(\frac{n\pi z}{2a})+B\cosh(\frac{n\pi z}{2a})
+\]
+
+\end_inset
+
+Next we want to find the particular solution 
+\begin_inset Formula $f_{n}(z)_{p}$
+\end_inset
+
+ of the non-homogenous equation.
+ The derivative of the right hand side is zero, we say that
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+f_{n}(z)_{p}=C
+\]
+
+\end_inset
+
+and substitute this in eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:NonHomo"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{eqnarray*}
+0-\left(\frac{n\pi}{2a}\right)^{2}C & = & \frac{dp}{\mu dx}\frac{4}{n\pi}\\
+C & = & \frac{dp}{\mu dx}\frac{16a^{2}}{n^{3}\pi^{3}}
+\end{eqnarray*}
+
+\end_inset
+
+The general solution of the non-homogenous equation eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:GenNonHomo"
+
+\end_inset
+
+)is thus
+\begin_inset Formula 
+\[
+f_{n}(z)=A\sinh(\frac{n\pi z}{2a})+B\cosh(\frac{n\pi z}{2a})-\frac{dp}{\mu dx}\frac{16a^{2}}{n^{3}\pi^{3}}
+\]
+
+\end_inset
+
+Now we can use the no-slip condition 
+\begin_inset Formula $u(\pm b)=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A\overset{!}{=}0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+f_{n}(z)_{p}=B\cosh(\frac{n\pi b}{2a})-\frac{dp}{\mu dx}\frac{16a^{2}}{n^{3}\pi^{3}}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+B=\frac{dp}{\mu dx}\frac{16a^{2}}{n^{3}\pi^{3}}\frac{1}{\cosh(\frac{n\pi b}{2a})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+f_{n}(z)=\frac{dp}{\mu dx}\frac{16a^{2}}{n^{3}\pi^{3}}\frac{\cosh(\frac{n\pi z}{2a})}{\cosh(\frac{n\pi b}{2a})}-\frac{dp}{\mu dx}\frac{16a^{2}}{n^{3}\pi^{3}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+f_{n}(z)=\frac{dp}{dx}\frac{16a^{2}}{n^{3}\pi^{3}\mu}\left[\frac{\cosh(\frac{n\pi z}{2a})}{\cosh(\frac{n\pi b}{2a})}-1\right]\label{eq:fnFourier}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Substituting eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fnFourier"
+
+\end_inset
+
+) into eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:FourierNS"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+u(y,z)=\frac{dp}{dx}\frac{16a^{2}}{\pi^{3}\mu}\sum_{n=1,3...,k+1}^{\infty}\left[\frac{\cosh(\frac{n\pi z}{2a})}{\cosh(\frac{n\pi b}{2a})}-1\right]\times\frac{\cos(\frac{n\pi y}{2a})}{n^{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Changing the notation 
+\begin_inset Formula $n=i$
+\end_inset
+
+, we end with the expression for a fully developed flow in 3D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+(
+\begin_inset Formula $a=200\mu m$
+\end_inset
+
+), (
+\begin_inset Formula $b=92.5\mu m)$
+\end_inset
+
+, 
+\begin_inset Formula $-a\leq y\leq a$
+\end_inset
+
+, 
+\begin_inset Formula $-b\leq z\leq b$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Velocity profile
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+u(y,z)=\frac{16a^{2}}{\mu_{d}\pi^{3}}\left(-\frac{d\hat{p}}{dx}\right)\sum_{i=1,3,\ldots n+1}^{\infty}(-1)^{\frac{i-1}{2}}\left[1-\frac{\cosh(\frac{i\pi z}{2a})}{\cosh(\frac{i\pi b}{2a})}\right]\times\frac{\cos\left(\frac{i\pi y}{2a}\right)}{i^{3}}\label{eq:VelocityProfile3D}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Volume flow rate
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+Q=\frac{4ba^{3}}{3\mu}\left(-\frac{d\hat{p}}{dx}\right)\left[1-\frac{192a}{\pi^{5}b}\sum_{i=1,3,\ldots n+1}^{\infty}\frac{\tanh(\frac{i\pi b}{2a})}{i^{5}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Mean velocity
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\bar{u}=\frac{Q}{A}
+\]
+
+\end_inset
+
+The velocity profile in 3D fig.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Parabolic-velocity-profile3D"
+
+\end_inset
+
+) is implemented by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mortensen2013MEK4300"
+
+\end_inset
+
+ in C++ , which is a much faster code than the corresponding python code.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/plots/3Dparabolic.eps
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Parabolic velocity profile in 3D (unity)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Parabolic-velocity-profile3D"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features rotate="0" booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $Re$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $u_{max}[\frac{\mu m}{\mu s}]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $\overline{u}[\frac{\mu m}{\mu s}]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $Q[\frac{\mu m^{3}}{\mu s}]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $2.2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.008730$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.00582$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $431$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $84$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.333343$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.2222287$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $16444$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $110$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.436521$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.291014$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $21535$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $170$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.674624$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.4497493$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $33281$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $220$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.873043$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.5820287$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $43070$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $340$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $1.349249$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $0.899499$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $66563$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Kinematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+U=\frac{Re\cdot\nu}{D_{h}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+Q=\overline{u}\cdot A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\bar{u}=\frac{Q}{l}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Summary
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Summarizing the finale model mathematical 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot\nabla)\boldsymbol{u} & = & -\nabla p+\nu\nabla^{2}\boldsymbol{u}+\boldsymbol{f}\qquad\textrm{for}\qquad\boldsymbol{x}\in\Omega\\
+\nabla\cdot\boldsymbol{u} & = & 0\qquad\textrm{for}\qquad\boldsymbol{x}\in\Omega\times[0,T]\\
+\boldsymbol{u}(\boldsymbol{x},t) & = & 0\qquad\textrm{for}\qquad\boldsymbol{x}\in\Gamma\times[0,T]\\
+p_{i} & = & p_{0}+C\int u_{i}\cdot\boldsymbol{n}\textrm{ds}_{i}\qquad\textrm{for}\qquad\boldsymbol{x}\in\Gamma_{out1}\quad\mbox{and}\quad\boldsymbol{x}\in\Gamma_{out2}\\
+\boldsymbol{u}(\boldsymbol{x},0) & = & u_{0}\qquad\textrm{for}\qquad\boldsymbol{x}\in\Gamma_{in}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $p_{i}=p_{0}+R=p_{0}+C\int u_{i}\cdot\boldsymbol{n}\textrm{ds}_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+x\\
+ & c
+\end{array}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula 
+\[
+\left.\frac{\partial\boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot\nabla)\boldsymbol{u}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\boldsymbol{u}}{\partial t}+(\boldsymbol{u}\cdot\nabla)\boldsymbol{u} & = & -\nabla p+\nu\nabla^{2}\boldsymbol{u}+\boldsymbol{f}\\
+\nabla\cdot\boldsymbol{u} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula 
+\[
+\boldsymbol{n}\cdot\nabla u=\frac{\partial u}{\partial n}\qquad\textrm{for}\qquad\boldsymbol{x}\in\Gamma_{out1}\quad\mbox{and}\quad\boldsymbol{x}\in\Gamma_{out2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "103col%"
+special "none"
+height "0.95in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/illustratorPS/biGmshTex.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+The bifurcation domain with initial and boundary conditions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

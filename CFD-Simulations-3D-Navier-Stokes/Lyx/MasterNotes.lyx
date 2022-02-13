@@ -1,0 +1,3017 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{listings} 
+\usepackage{nomencl} 
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The Experimental Setup and Measurement technique
+\end_layout
+
+\begin_layout Plain Layout
+In this section a brief introduction to the experimental setup conducted
+ by Kolaas et.
+ al will be given.
+ The experiments was performed at the Microfluidics Laboratory at SINTEF
+ MiNaLab (at the fluid laboratory ), as a cooperation project with the Hydrodyna
+mics laboratory at University of Oslo (UIO).
+ The objective of 
+\end_layout
+
+\begin_layout Plain Layout
+Geometries
+\end_layout
+
+\begin_layout Plain Layout
+Two versions of microfluidic geometries motivated by expanded Y-bifurcation
+ from biomedical flow where manufactured in silicon.
+ The difference in the geometrical shape is that the second one has a circular
+ expansion between the two outlets, which is emulate an aneurysm in a circle
+ of Willis see fig(?).
+ The choice of material was a 
+\begin_inset Formula $500\mu m$
+\end_inset
+
+ thick, 
+\begin_inset Formula $6$
+\end_inset
+
+ inch double sided polished silicon wafers.
+ The silicon wafer was first coated with photoresist, then exposed trough
+ a glass/chrome mask (from Compugraphics) containing the channel structures,
+ and developed.
+ Then, the photoresist was used as mask during Deep Reactive Ion Etch (DRIE)
+ of silicon.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The etching was done on an Alcatel AMS200 I-Productivity tool by using a
+ triple pulsed SF6/C4F8/O2 plasma DRIE process .
+ Both geometries were etched to a depth of 
+\begin_inset Formula $185\mu m$
+\end_inset
+
+.
+ After completing the etching, DRIE polymers residue and the photoresist
+ and were stripped in an O2 plasma asher and flushed in an RCA clean, which
+ is basically the removal of ionic and organic contaminants plus the removal
+ of oxide layer.
+ In order to ensure complete wetting during subsequent experiments, the
+ wafers where oxidized to create a 50nm SiO2 layer on the surface of the
+ silicon.
+ A diamond saw diced the wafers into chips and laminated with polyolefin
+ transparent film
+\end_layout
+
+\begin_layout Plain Layout
+The structure of the micro-channels consisted of a rectangular cross-sections
+ with a nominal depth of 
+\begin_inset Formula $185\mu m$
+\end_inset
+
+ arranged in a Y-bifurcation layout, see fig.
+ ?, with the inflow from left to right.
+ The width of the inlet was 
+\begin_inset Formula $400\mu m$
+\end_inset
+
+ , while the smallest outlet was 
+\begin_inset Formula $100\mu m$
+\end_inset
+
+wide with an exit angle 
+\begin_inset Formula $\alpha_{1}=45^{o}$
+\end_inset
+
+ relative to the inlet, and second outlet with a width of 
+\begin_inset Formula $400\mu m$
+\end_inset
+
+ with an exit angle 
+\begin_inset Formula $\alpha_{1}=45^{o}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/illustratorPS/biGmshdescription.jpg
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/illustratorPS/anGmshdescription2.jpg
+	scale 40.5
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+One of the main advantage with this type of etching technique is the extreme
+ precision in the geometrical model i.e the width and the depth of the channel
+ geometry, with a deviation in the channel width being less than 0.3 μm.
+ Another advantage is that there is no restriction on how to structure the
+ channel.
+ The geometry can be etched with complicated branching patterns and total
+ randomness, which could be handy when for example in the study of flows
+ in complex tube/pipe bundles.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Setup
+\end_layout
+
+\begin_layout Plain Layout
+A custom-made frame where build to hold the silicon chip, this feature would
+ enable to easy connect to other equipment and to quickly change the shape
+ of the geometry.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArtChip"
+
+\end_inset
+
+ shows the silicon chip with the Y-bifurcation channel wrapped in the base
+ frame.
+ The pressure taps are the small outlets from the channels, and the flow
+ was driven by a programable syringe pump (Harvard Apparatus PHD 2200).
+ This pump was not powerful enough to create a periodic time-dependent flow
+ within the recording length of the camera.
+ Alternatively, two valves were used to either send or bypass the flow through
+ the bifurcation, where both outlets were connected through a confluence
+ to ensure equal pressure condition on the outlets before ending in a pipe
+ above a sink (atmospheric pressure condition).
+ The schematic setup for the pump ,reservoirs, geometry and the valves are
+ shown in fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArtSetup"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/ArtSetup.png
+	scale 15
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Experimental setup showing flow generator, valves, channel geometry and
+ outlet reservoir.
+ The small outlets from the main channel can be used as pressure taps.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArtSetup"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+As a light source for PTV and visualization, a metal halide lamp X-Cite
+ 120 was used for fluorescence illumination of the particles, which has
+ power enough to capture images at 1000 fps with a digital video camera
+ at a volume flow rate sufficiently for velocity measurement.
+ At higher flow rates a pulsating light source would be needed to avoid
+ streaks in the images acquired.
+ For the recordings, a Photron Fastcam-X 1024 PCI high speed video camera
+ of CMOS type with maximum resolution of 
+\begin_inset Formula $1024×1024$
+\end_inset
+
+ pixels at 
+\begin_inset Formula $1000$
+\end_inset
+
+ fps and a pixel size of 
+\begin_inset Formula $17\mu m$
+\end_inset
+
+ was used together with an motorized Olympus BX61 microscope and a 
+\begin_inset Formula $20×$
+\end_inset
+
+ magnification lens allowing to step the focus in the z-directions using
+ microscope control software.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The flow was seeded with a invitrogen red fluorescent particles (F8851)
+ 
+\begin_inset Formula $1\mu m$
+\end_inset
+
+ diluted with deionized water at the volume ratio 
+\begin_inset Formula $1:1333$
+\end_inset
+
+ with a concentration of 
+\begin_inset Formula $3.6\cdot10^{6}$
+\end_inset
+
+ particles/ ml.
+ The highest flow rates was seeded with Duke scientific green fluorescent
+ 
+\begin_inset Formula $4.8\mu m$
+\end_inset
+
+ (
+\begin_inset Formula $5\mu m$
+\end_inset
+
+ nominal) particles (G0500) with a volume ratio of 
+\begin_inset Formula $1:133$
+\end_inset
+
+ and a concentration of 
+\begin_inset Formula $1.6\cdot10^{5}$
+\end_inset
+
+ particles/ml.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/ArtPartRaw.png
+	scale 31
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A raw image of the geometry with seeders (
+\begin_inset Formula $5\mu m$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "figArtRaw"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figArtRaw"
+
+\end_inset
+
+ illustrates a raw image of the geometry with seeders (
+\begin_inset Formula $5\mu m$
+\end_inset
+
+) where each particle covers 4–10 pixels.
+ To avoid that particles getting stuck to the hydrophobic sealing film and
+ obscure the view of the flow, a non-ionic surfactant, Triton X-100, was
+ mixed into the fluid with volume ratio 1:3333 with the effect of reducing
+ the surface tension and increasing the wetting properties of the liquid.
+\end_layout
+
+\begin_layout Plain Layout
+Particle Tracking 
+\end_layout
+
+\begin_layout Plain Layout
+Particle tracking velocimetry (PTV) is an ideal technique for studying the
+ local and particle accelerations for time-dependent flow in channels with
+ expanded bifurcation.
+ The high speed digital camera is powerful enough for 1000 fps at full resolutio
+n, but this is only sufficient for measuring the lowest flow rate.
+ To cover all flow rates, a possible remedy is to physically scale the channel
+ with several versions of the geometry ranging the width of the channel
+ from 0.4–4mm.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The fundamental idea in PTV is to suspend particles in a fluid, then measure
+ the displacement of the particles to obtain an indirect measurement of
+ the fluid flow, with the assumption that the particles will follow the
+ fluid.
+ By taking two (or more) images of the flow at a given time interval
+\begin_inset Formula $Δt$
+\end_inset
+
+, one can measure the particle displacement 
+\begin_inset Formula $Δx$
+\end_inset
+
+ and thus estimate the velocity of the particle 
+\begin_inset Formula $Δu=Δx/Δt$
+\end_inset
+
+, and consequently the fluid velocity.
+\end_layout
+
+\begin_layout Plain Layout
+The main difference between regular PTV and 
+\begin_inset Formula $μ$
+\end_inset
+
+PTV is a difference in scale.
+ Another consideration is the illumination of the particles, where in regular
+ PTV the particles are illuminated using a light sheet, while at 
+\begin_inset Formula $\mu$
+\end_inset
+
+-scale illuminating a light sheet usually not possible and therefore volume
+ illumination is used instead, which results in increased background noise
+ and weakens the quality of 
+\begin_inset Formula $μ$
+\end_inset
+
+PIV .
+ Contrary to PIV, PTV has the ability to detect and choose particles based
+ on their properties like size and intensity, which removes the effect from
+ large and dim particles far from the focal plane.
+ Due to Lagrangian nature of each particles, when measuring a pulsative
+ flow , the velocity and acceleration are easily found for each particle.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The position of each particle is 
+\begin_inset Formula $\boldsymbol{\xi}(\boldsymbol{x},t)$
+\end_inset
+
+, where 
+\begin_inset Formula $\boldsymbol{\xi}$
+\end_inset
+
+ is the initial position and 
+\begin_inset Formula $t$
+\end_inset
+
+ is the time.
+ The Eulerian velocity field can be obtained from spatially averaged time-resolv
+ed PTV (SATPTV).
+ However, Kolaas et.al used an ensemble-average of the position of particles
+ by the method of moving least squares, also referred as local polynomial
+ regression.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\overline{\boldsymbol{\xi}(\boldsymbol{x},t)}=e_{1}^{T}(P^{T}WP)^{-1}P^{T}\boldsymbol{x}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $P$
+\end_inset
+
+ is the multivariate Vandermonde matrix for a shifted power basis and 
+\begin_inset Formula $W$
+\end_inset
+
+ is a weighting function.
+ To estimate the particle velocity and the acceleration a weighted least
+ squares problem is solved for each evaluation point and the fitted local
+ polynomial is then differentiated.
+ The velocity 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\overline{\boldsymbol{u}(\boldsymbol{x},t)}=\frac{\text{\partial}}{\partial t}\left(\overline{\boldsymbol{x}(\boldsymbol{\xi},t)}\right)
+\]
+
+\end_inset
+
+and the acceleration 
+\begin_inset Formula 
+\[
+\overline{\boldsymbol{a}(\boldsymbol{x},t)}=\frac{\text{\partial}\boldsymbol{u}}{\partial t}+\boldsymbol{u}\cdot\nabla\boldsymbol{u}=\frac{\partial^{2}}{\partial t^{2}}\left(\overline{\boldsymbol{x}(\boldsymbol{\xi},t)}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The use of ensemble averaging invokes consideration of variance and bias
+ error , where the bias error is due to signal smoothing which can be large
+ if the signal is over-smoothed.
+ There is a weighing between bias (resolution) and variance (accuracy).
+ By selecting the right sub-window size these errors can be minimized .
+ Other important considerations for multivariate estimation is to balance
+ accuracy vs.
+ computational cost, which for MLS can be done by applying a weighting function
+ with compact support and building a kd-tree, which basically is a space-partiti
+oning data structure for organizing points in a 
+\begin_inset Formula $k$
+\end_inset
+
+-dimensional space.
+\end_layout
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\begin_layout Plain Layout
+A visualization study was performed by seeding the flow with appropriate
+ particles and photographed with long exposure times resulting in detailed
+ velocity/acceleration measurements and revealing path-lines or streamlines
+ of the flow.
+ Six different Reynolds numbers of the flow were visualized; 
+\begin_inset Formula $Re=2.2$
+\end_inset
+
+, 
+\begin_inset Formula $84$
+\end_inset
+
+, 
+\begin_inset Formula $110$
+\end_inset
+
+, 
+\begin_inset Formula $170$
+\end_inset
+
+, 
+\begin_inset Formula $220$
+\end_inset
+
+, 
+\begin_inset Formula $340$
+\end_inset
+
+.
+ The characteristic velocity in the experiment was calculated from the volume
+ flow rate set at the syringe pump, and the kinematic viscosity was taken
+ at 
+\begin_inset Formula $20C^{o}$
+\end_inset
+
+, while the characteristic length scale of a rectangular channel was taken
+ as the hydraulic diameter of the inlet channel given by 
+\begin_inset Formula 
+\[
+D_{H}=\frac{4ab}{2(a+b)}=\frac{2ab}{a+b}
+\]
+
+\end_inset
+
+With the inlet length of 
+\begin_inset Formula $a=400\mu m$
+\end_inset
+
+ and the depth 
+\begin_inset Formula $b=185\mu m$
+\end_inset
+
+ the hydraulic diameter becomes 
+\begin_inset Formula 
+\[
+D_{H}=\frac{2\cdot400\cdot185(\mu m)^{2}}{(400+185)\mu m}\approx252.991452991\mu m\approx\underline{253\mu m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The flow is characterized by a stagnation point at low Reynolds number,
+ where the position moves slightly to the left as the flow rate increases
+ see fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArtStreamlines"
+
+\end_inset
+
+(a)-(c).
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/ArtStreamlines.jpg
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Streamlines in the Y-channel with expanded bifurcation.
+ Areas with higher image intensity indicate lower velocity.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArtStreamlines"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+At Re ≈ 84 separation occurs, which consists of an eddy at the large outlet
+ outside wall and an one at the small outlet outside wall (fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArtStreamlines"
+
+\end_inset
+
+(b)).
+ Increasing Reynolds number makes the eddy at the small outlet grow inside
+ the expanded bifurcation, and the flow takes a u-bend around a center node,
+ fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArtStreamlines"
+
+\end_inset
+
+(d).
+ Except of a boundary layer at the top and the bottom of the channel, the
+ flow is almost planar until the spiral structures appears at (
+\begin_inset Formula $Re≥340$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/ArtStreamlinesBi.jpg
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Streamlines in the Y-channel.
+ Areas with higher image intensity indicate lower velocity.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+An important aspect is that the separation and transition was absent in
+ the experiments without the expanded bifurcation, indicating that the changes
+ in geometry changes the flow characteristics dramatically see fig.
+ 6.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+For random error estimation a standard deviation of a stationary flow was
+ calculated, see fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArtStandDev"
+
+\end_inset
+
+, which resulted in a estimate of 4.1% (95% confidence) for an instant moment
+ in the time-resolved flow.
+ The random error was higher where particles entered at the inlet and the
+ outlet of the field of view (FOV) and due to the background noise the error
+ was higher along the edges of the geometry.
+ Also, because of a small crease in the sealing film, there was registered
+ higher error in the small outlet which could be explained by the fact that
+ the particle track loses information of the particle position when it passes
+ under the crease.
+ A similar analysis made on the local and particle acceleration showed that
+ the absolute error estimate for the accelerations is approximately 
+\begin_inset Formula $6.3\cdot10^{3}\mu m/s^{2}$
+\end_inset
+
+ with a 95% confidence.
+ Theoretically, the local acceleration 
+\begin_inset Formula $\partial u/\partial t=0$
+\end_inset
+
+, suggesting that a relative estimate would not be informative.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/ArtStandDev.jpg
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Average velocity (a) and standard deviation relative to average velocity
+ of stationary flow (b) with 
+\begin_inset Formula $Re≈2.2$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArtStandDev"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/ArtStatPoiseuille.jpg
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Stationary Poiseuille flow measured upwind from the bifurcation using 17
+ planes of the z-axis.
+ (a) Measured mean flow given in μm/s.
+ (b) Difference from Poiseuille flow (theory), in μm/s.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArtStatPoiseuille"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Poiseuille flow for a square duct was used to check and compare the error
+ in the velocity measurement for the flow upstream from the bifurcation,
+ since the Poiseuille flow would include systematic errors.
+ The stationary measurement contained 
+\begin_inset Formula $17$
+\end_inset
+
+ layers of the 
+\begin_inset Formula $z$
+\end_inset
+
+-axis, with each layer consisting of 400 frames taken at 1000 fps, which
+ where selected by stepping the focus using the motorized microscope.
+ The discrepancy was found to be 
+\begin_inset Formula $(u_{therory}-u)_{rms}/u_{max}=2.43\text{\%}$
+\end_inset
+
+ which was of the same order as the accuracy of the pump (1%) (see fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArtStatPoiseuille"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Plain Layout
+To estimate the out-of-plane motion, the difference in particle size can
+ be related to the 
+\begin_inset Formula $z$
+\end_inset
+
+-position by 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+d_{e}(z)=\sqrt{A+Bz^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+A=Md_{p}^{2}+d_{s}^{2}=Md_{p}^{2}+5.95(M+1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+B\approx\frac{M}{f^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+where the magnification is
+\begin_inset Formula $M$
+\end_inset
+
+, the particle diameter 
+\begin_inset Formula $d_{p}$
+\end_inset
+
+ , diffraction-limited point response is 
+\begin_inset Formula $d_{s}$
+\end_inset
+
+ ,
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the wave number of light and 
+\begin_inset Formula $f$
+\end_inset
+
+ is the 
+\begin_inset Formula $f$
+\end_inset
+
+-number of the lens or commonly called the focal ratio.
+ Since this theory is originally developed for air, one can account for
+ the light passing through different media.
+ By assuming paraxial approximation, then the 
+\begin_inset Formula $f$
+\end_inset
+
+-number can be modified by 
+\begin_inset Formula $f_{w}\approx f_{a}\frac{n_{a}}{n_{w}}$
+\end_inset
+
+ , where 
+\begin_inset Formula $n_{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{w}$
+\end_inset
+
+ are the index of refraction for air and water, respectively.
+ This is only valid when the thickness of sealing film and depth of channel
+ is small compared to the object distance.
+ Other sources of error include the distribution of particle diameter 
+\begin_inset Formula $\textrm{std}(dp)/dp=5\%$
+\end_inset
+
+ , and if the particles are illuminated by a spectrum rather instead of
+ a single wavelength may cause some chromatic aberration.
+ Since the sign of the z-position of the particle is missing, it is not
+ possible to calculate the first moment of the velocity component 
+\begin_inset Formula $w$
+\end_inset
+
+ in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction , instead the estimation of the second moment can be done by
+ 
+\begin_inset Formula 
+\[
+\left(\frac{\partial}{\partial t}\mid z\mid\right)^{2}=\left(\textrm{sign}(z)\frac{\partial z}{\partial t}\right)^{2}=\left(\frac{\partial z}{\partial t}\right)=w^{2}
+\]
+
+\end_inset
+
+using the definition of variance 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\textrm{var}(w)=E(w^{2})-E(w)^{2}
+\]
+
+\end_inset
+
+ the estimates on the mean and std of the out-of-plane velocity can be given:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+0\leq E(w)\leq\sqrt{E(w^{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+0\leq\textrm{std}(w)\leq\sqrt{E(w^{2})}
+\]
+
+\end_inset
+
+To determine the particle size one can assume that the particle image can
+ be approximated by a Gaussian distribution 
+\begin_inset Formula 
+\[
+I=I_{bg}+I_{0}\exp(-4\beta^{2}\frac{(\boldsymbol{x}-\boldsymbol{x}_{0})^{T}(\boldsymbol{x}-\boldsymbol{x}_{0})}{d_{e}^{2}}
+\]
+
+\end_inset
+
+The diameter, 
+\begin_inset Formula $d_{e}$
+\end_inset
+
+, is then defined at the contour line 
+\begin_inset Formula $\exp(-\beta^{2})$
+\end_inset
+
+ using a constrained non-linear least square fit.
+ Because of the time-continuous exposure, the particles will be smeared
+ along the particle tracks, which can be adjusted by introducing a more
+ general Gaussian distribution 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+I=I_{bg}+I_{0}\exp(-4\beta^{2}(\boldsymbol{x}-\boldsymbol{x}_{0})^{T}D^{-1}(\boldsymbol{x}-\boldsymbol{x}_{0})
+\]
+
+\end_inset
+
+The diameter 
+\begin_inset Formula $d_{e}^{2}$
+\end_inset
+
+ was taken as the smallest eigenvalue of
+\begin_inset Formula $D$
+\end_inset
+
+.
+ To assure that 
+\begin_inset Formula $D$
+\end_inset
+
+ is positive definite, elements of the Cholesky factorization of 
+\begin_inset Formula $D$
+\end_inset
+
+ are used as parameters in the minimization rather then the elements in
+ 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ By this theory the following estimation can be given 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+0\leq E(w)\leq\sqrt{E(w^{2})}\sim\frac{1}{16}\sqrt{U^{2}+V^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+0\leq\textrm{std}(w)\leq\sqrt{E(w^{2})}\sim3.3\sqrt{u^{2}+v^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The estimated out-of-plane component did not seemed to depend on the flow
+ rate, instead it appeared to be constant over the FOV, indicating that
+ the physical component can be constant or the estimate of 
+\begin_inset Formula $E(w^{2})$
+\end_inset
+
+ is limited by the accuracy of the algorithm and then the physical quantities
+ are likely to be smaller than the estimate.
+ Even if we do not take this into account, the estimate is much closer to
+ the fluctuations than the mean of the other components, hence the out-of-plane
+ is likely to be small or zero.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Using the Lagrangian information the full acceleration field can be calculated.
+ This is not so easy with PIV where only the local acceleration is estimated
+ from two subsequent velocity fields.
+ The accelerations is important for quantifying the flow and also to determine
+ the pressure and forces acting at the walls.
+ In numerical simulations the dynamics of the flow can be difficult to calculate
+ due to the high spatial and temporal resolution needed.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Computational fluid dynamics often abbreviated (CFD) is a powerful tool
+ to test theory up against experiment, and one can always verify experiments
+ with numerical simulations if the experiment is set up properly.
+ In order to minimize discrepancies and to keep the noise level as low as
+ possible, the experimental setup and design must be performed with care
+ and accuracy.
+ Noise in experiments can be generated in many ways.
+ Some common sources are noise due to shape and alignment which should be
+ absent if the geometrical models are made with high accuracy.
+ The choice of measurement method can also generate noise, both random noise
+ and static.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In a recent study by J.
+ Kolaas, A.
+ Jensen, and M.
+ M.
+ Mielnik, conducted at the Microfluidics Laboratory at SINTEF MiNaLab, as
+ a joint project with the Hydrodynamics laboratory at University of Oslo,
+ they performed experiments of fluid flow in micro-channel with special
+ focus on high-accuracy geometries and also on adapting the right velocimetry
+ technique and post-processing method.
+ The main objective was to investigate the kinematics of the flow when changes
+ were made to the geometry, and also varying the initial conditions from
+ stationary to pulsative flow and the differences in the velocity and accelerati
+on fields was scrutinized for different geometries.
+\end_layout
+
+\begin_layout Plain Layout
+This master thesis aims to carefully run CFD simulations using FEniCS in
+ an effort to reproduce these experimental data.
+ Discrepancies between experiments and simulations will be an important
+ topic in the light of the chosen method as well as resolution and computational
+ cost.
+ The simulations are performed with relatively coarse resolution in 2D,
+ before attempting full 3D direct numerical simulations.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Microfluidics is the science and technology of systems that process or manipulat
+e minuscule amounts of fluids, typically between 
+\begin_inset Formula $10^{-9}-10^{-18}$
+\end_inset
+
+ liters 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Whitesides_Microfluidics"
+
+\end_inset
+
+.
+ The science of it as in the study of the behavior of fluids in micro-channels,
+ and the technology as the manufacturing of microfluidics devices such as
+ 
+\emph on
+lab on a chip.
+
+\emph default
+ In order to be considered as microfluidics, at least one dimension of the
+ channel must be of the order of ten to hundreds of micrometers (
+\begin_inset Formula $1\mu\textrm{m}=1.0\cdot10^{-6}\textrm{m}$
+\end_inset
+
+) .
+ Being a multidisciplinary field intersecting engineering, physics, chemistry,
+ biochemistry, nanotechnology, and biotechnology, microfluidics has a wide
+ and important range of applications.
+ .
+ 
+\end_layout
+
+\begin_layout Plain Layout
+A microfluidic chip consists of a network of micro-channels mostly etched
+ or molded into a material, typically glass, silicon or polymer such as
+ PDMS (PolyDiMethylSiloxane) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MFandMFdevices,Anthonysamy_Micro"
+
+\end_inset
+
+.
+ The microfluidic chip is connected by inputs where the fluids are injected
+ in, and carried through the micro-channels and eventually out of the chip.
+ This allows one to achieve desired functions like; mixing of fluids, pumping,
+ redirecting and/or allow chemical reactions.
+\end_layout
+
+\begin_layout Plain Layout
+Originally, the fabrication process of a microfluidic chip was derived from
+ the 
+\emph on
+semiconductor
+\emph default
+ industry and was based on 
+\emph on
+photolithography
+\emph default
+ on 
+\emph on
+silicon methods
+\emph default
+.
+ Photolithography, also termed 
+\emph on
+optical lithography
+\emph default
+ or 
+\emph on
+UV lithography
+\emph default
+ is a process used in 
+\emph on
+micro-fabrication
+\emph default
+,
+\emph on
+ 
+\emph default
+where light is applied to transfer a geometric pattern from a photomask
+ to a light-sensitive chemical 
+\emph on
+photoresist
+\emph default
+ on the substrate.
+ In order to achieve the desired pattern on the material of choice, further
+ chemical processing then either engraves or deposes.
+ Due to development of a process called 
+\emph on
+deposition and electrodeposition
+\emph default
+, which includes etching, bonding, injecting, molding, embossing and soft
+ lithography (especially with PDMS), other materials such as glass, ceramics,
+ metal and polymers may be used, giving researchers highly flexible alternatives
+ to photolithography.
+ These materials offers faster prototyping, enables to design microfluidic
+ chip with specific characteristics, optical, biological or chemical compatibili
+ty, lower cost, possibility of electro.
+ The final choice of a material depends on the desired application.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Microfluidics: History
+\end_layout
+
+\begin_layout Plain Layout
+The field of microfluidics can be divided in four major parental categories;
+ 
+\emph on
+molecular analysis
+\emph default
+, 
+\emph on
+biodefence
+\emph default
+, 
+\emph on
+molecular biology
+\emph default
+ and 
+\emph on
+microelectronics
+\emph default
+.
+ This section will give a brief history of microfluidics.
+\end_layout
+
+\begin_layout Plain Layout
+The birth of transistors in the 50's made in blocks of semiconductors would
+ gradually replace the lamps previously used in the manufacture of electronic
+ devices (radio, computer).
+ Initially, this technology was developed to manufacture microprocessors
+ and to miniaturize transistors, would later make it possible to produce
+ microscopic channels and integrate them on chips.
+\end_layout
+
+\begin_layout Plain Layout
+In the 60's the development of technologies such as photolithography emerged
+ and revolutionized the miniaturization and integration of transistors on
+ semiconductor wafers, mainly of silicon.
+ The Apollo space research with an astronomical budget of $25 billion, gave
+ opportunity to fund research program on the miniaturization of computers
+ which would later lead to the production of the first integrated circuit
+ and with them the first microprocessors.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In the late 1970's a group of researchers at Stanford University led by
+ Terry, Jerman and Angell , built a miniature gas analysis system based
+ on the principles of gas chromatography.
+ The major components was fabricated in silicon using photolithography and
+ chemical etching techniques, which allowed at that time, size reductions
+ of nearly three orders of magnitude compared to conventional laboratory
+ instruments.
+ Although, originally developed for chromatograph and expected for applications
+ in the areas of portable ambient air quality monitors, implanted biological
+ experiments and planetary probes, this would later turn out to be the birth
+ of a new multidisciplinary field referred to as 
+\emph on
+microfluidics,
+\emph default
+ which would later intersect fields such as engineering, physics, chemistry,
+ biochemistry, nanotechnology, and biotechnology 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "terry1979gas"
+
+\end_inset
+
+.
+ These techniques in combination with the power of the laser in optical
+ detection enabled to simultaneously achieve high sensitivity and high resolutio
+n applying very small amounts of samples or reagents.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The next major motivational development in microfluidics emerged after the
+ cold war.
+ Due to the development of chemical and biological weapons, the US Defense
+ Advanced Research Projects Agency (DARPA) would counter these threats by
+ funding and supporting a series of programs with the main target at developing
+ microfluidic systems designed to serve as detectors for these chemical
+ and biological threats.
+ These programs were the main source for the rapid growth of academic microfluid
+ic technology.
+ Later on in the 80's a new type of device emerged called 
+\emph on
+Micro Electro Mechanical Systems
+\emph default
+ or MEMS.
+ This was based on silicon etching procedures developed for microelectronics
+ industry and made it possible to manufacture the first device containing
+ movable micro-elements integrated on a silicon wafer, giving rise to applicatio
+ns in the fields of pressure sensors and printer heads.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In the 80's and 90's, the explosion in genomics led to the third major developme
+nt in microfluidics from the field of molecular biology and chemistry.
+ One of the most significant contribution in the development of microfluidics
+ came from the need for controlling the movement of liquids in micro-channels.
+ Many researchers started to investigated in the applications of MEMS and
+ started to develop laboratories on a chip which would enable the integration
+ of almost all diagnostic operations performed in a hospital on a single
+ microfluidic chip.
+ The majority of microfluidic devices were still made of silicon or glass
+ which required the heavy infrastructure of the microelectronics industry.
+\end_layout
+
+\begin_layout Plain Layout
+The forth main contribution was from the field of microelectronics.
+ Starting millennium, technologies based on molding micro-channels in polymers
+ such as PDMS grew gradually and started to replace microfluidic devices
+ made of silicon or glass.
+ Cost and production time of these decreased and enabled a large number
+ of laboratories to conduct researches in microfluidics.
+ For biological sample analysis, microfluidic devices made on silicon or
+ glass appears to be unsuitable or inappropriate.
+ Especially, silicon is expensive.
+ It also is opaque to UV and visible light, making it useless for conventional
+ optical methods of detection.
+ Neither glass or silicon has all the required properties for work with
+ living mammalian cells, in particular, the permeability to gases is required.
+ Many exploratory microfluidics research has been done with polymer, mainly
+ PDMS, which has distinct properties from those of silicone
+\end_layout
+
+\begin_layout Plain Layout
+Microfluidics: The Present
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/microfluidics_pub.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Microfluidics publications
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thousands of researchers are today working with microfluidics to extend
+ its application fields, particularly towards biomedicine, biology and chemistry.
+ Two especially important contributions in the fabrication process of microfluid
+ic devices are soft lithography in PDMS, and pneumatically activated , pumps,
+ valves and mixers based on soft-lithographic procedures.
+ These method have shortened the fabrication process of prototypes dramatically.
+ In particular, quake’s pneumatic valves has been important as they have
+ made it possible to design and examine complicated devices, which in turn
+ made opened up a number of areas of applications.
+ With new fabrication methods, microfluidics has revealed some fundamental
+ differences between fluid flow in large channels and those in micro-channels.
+ The most important differences are are seen in turbulence.
+ In macro scale flow, fluids mix convectively, for example milk stirred
+ in coffee, which illustrates that inertia is often more important then
+ viscosity.
+ However, when water is used as fluid in micro-channels the opposite appears
+ to be true; fluids does not mix convectively.
+ In fact, when to fluids streams together in micro-channels, they flow in
+ a parallel stream, turbulence and eddies are absent.
+ The only mixing is due to molecular diffusion across the interface between
+ those fluids.
+ One particularly important parameter in the study of fluid flow is the
+ Reynolds number.
+ This number represents the ratio of inertial forces to viscous forces and
+ gives an indication of whether a flow is laminar or turbulent.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+Re=\frac{ul}{\nu}\label{eq:ReynoldsNumber}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $u$
+\end_inset
+
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$u$"
+description "Velocity component"
+
+\end_inset
+
+is the characteristic velocity, 
+\begin_inset Formula $l$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$l$"
+description "Characteristic length scale"
+
+\end_inset
+
+ is the characteristic length scale and 
+\begin_inset Formula $\nu$
+\end_inset
+
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\nu$"
+description "Kinematic viscocity"
+
+\end_inset
+
+is the kinematic viscosity.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Microfluidics: Applications
+\end_layout
+
+\begin_layout Plain Layout
+Nowadays there are many methods of fabrication and a wide range of components
+ making it possible to apply microfluidic systems to the resolution of problems
+ instead of just demonstrate the principles.
+ The most developed application in microfluidics is probably the screen
+ conditions or protein crystallization such as composition, cosolvents,
+ pH, ionic strength and concentration.
+ These procedures allows to screen large numbers of conditions, like separate
+ nucleation, the growth and conservation of crystals.
+ Other laboratory applications include separations linked to mass spectroscopy,
+ bioanalysis examination, manipulation of samples consisting of a single
+ cell or a single molecule , high-throughput screening in drug development,
+ and synthesis of F-labelled organic compounds for positron emission tomography.
+ The manipulation of multiphase flows is another strength of microfluidic
+ systems.
+ They enable the generation and manipulation of mono-disperse bubbles, (Fig.
+ 3) or droplets34–37 of a dispersed gas or liquid phase in a continuous
+ liquid stream; these dispersions suggest new routes to the production of
+ polymer particles, emulsions and foams.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Microfluidics: The Future 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection
+Particle Image Velocimetry (PIV)
+\end_layout
+
+\begin_layout Plain Layout
+Particle Image Velocimetry (PIV) is a branch of a more general class called
+ Quantitative Imaging (QI), which is an optically based measurement technique
+ applied in experimental fluid mechanics.
+ Quantitative Imaging techniques are basically analysis of digital imaging
+ via softwares and are based on the principles of pattern matching.
+ QI enables one to capture the 
+\emph on
+whole field 
+\emph default
+properties e.g the velocity field 
+\begin_inset Formula $\mathbf{u}(\mathbf{x},t)$
+\end_inset
+
+, the vorticity field 
+\begin_inset Formula $\mathbf{\mathbf{\omega}}(\mathbf{x},t)$
+\end_inset
+
+, the Reynolds stress field 
+\begin_inset Formula $\overline{u'v'w'}$
+\end_inset
+
+.
+ Qi techniques can be divided into three distinct and fundamentally different
+ types; 1.
+ Flow seeded with discrete particles - mainly used for velocity determination.
+ 2.
+ Flow seeded with tracers, like fluorescent dye - to determine the scalar
+ field properties like concentration or temperature.
+ 3.
+ Unseeded flow - to capture the difference in density, but also to determine
+ the scalar field properties.
+ In the following, some general classes of QI techniques will be briefly
+ presented.
+ Non intrusive
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Particle Streak Velocimetry
+\emph default
+ (PSV): This class of techniques aims to capture the particle streaks as
+ a result, where the exposure time of the image is long relative to the
+ time a particle occupies a point in space.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Laser Speckle Velocimetry
+\emph default
+ (LSV): The density of seeding is so high that a captured image mostly overlaps
+ and interferes with the particle images, which results in a speckle field
+ or a intensity texture.
+ By correlation of the speckle pattern in a small subregion with another
+ subregion, the velocity field is then extracted, either with optical methods
+ - Young's fringe analysis or digitally - auto/cross correlation analysis.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Particle Image Velocimetry 
+\emph default
+(PIV): Now the seeding density is moderate such that the distance between
+ neighbor particles are between few to ten times the particle diameter.
+ This makes sure that all small subregions have many distinct discretely
+ imaged particles within them and relatively few particle images overlaps.
+ There are many ways to extract the velocity field, but the most common
+ ways are digitally by auto/cross correlation.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Particle Tracking Velocimetry 
+\emph default
+(PTV): In this general class of technique the seeding density is so low
+ that the particle images are predominantly non-overlapping or interfering.
+ By tracking the motions of individual particles over a known time, the
+ velocity can be extracted.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+There are many other names for particle based techniques which fall into
+ two broad classes, PIV and PTV, each with its own distinct different developmen
+t path: Pulsed Light Velocimetry (PLV), Particle Image Displacement Velocimetry
+ (PIDV), Particle Displacement Velocimetry (PDV), Digital Particle image
+ Velocimetry (DPIV), Digital Particle Tracking Velocimetry (DPTV), Correlation
+ Image Velocimetry (CIV), Spatial Correlation Velocimetry (SCV) and Large-Scale
+ Particle Image Velocimetry (LSPIV).
+ For three dimensional QI techniques there are four fundamental approaches:
+ 
+\emph on
+Holographic
+\emph default
+ techniques, 
+\emph on
+Stereoscopic imaging
+\emph default
+ with multiple cameras, 
+\emph on
+Depth-Of-Field
+\emph default
+ (DOF) with a single camera, and scanning a light sheet through a volume.
+ The basic principle to all particle based techniques is that the instantaneous
+ velocity field is measured by recording the position of images produced
+ by small tracer particles, suspended in the fluid, at successive instants
+ in time.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/PVillustration3.png
+	scale 35
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/PIVillustration2.jpg
+	scale 12
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/PIVvortex.jpg
+	scale 32.9
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Hereafter the focus will be on PIV.
+ With PIV, the flow is seeded with appropriately sized particles and a strong
+ light source typically laser is used to illuminate the particles over a
+ quasi two-dimensional light sheet with equally spaced grids.
+ Thereafter, a digital camera that is connected to a computer, collects
+ the images as the particles pass the light sheet.
+ There are many ways to collect the mean displacements of the particles,
+ which falls under one of two categories; single exposure of multiple images
+ or multiple exposure of a single image.
+ In single exposure multiple images(<--sjekk), the fundamental technique
+ to extract information is done by crosscorrelation, while multi-exposed
+ single image uses autocorrelation.
+ 
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/PIVframeExposure.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Since crosscorrelation is more accurate and also more straightforward, the
+ discussion will be restricted on PIV based on crosscorrelation of image
+ pair, meaning that crosscorrelation analysis will be applied to two consecutive
+ images.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Assuming that a pair of images is captured, the second picture is collected
+ in a known time lag 
+\begin_inset Formula $\Delta t=t_{n}-t_{n-1}$
+\end_inset
+
+, then a straight forward approach to crosscorrelation analysis is to define
+ a squared sub-window, each side with length 
+\begin_inset Formula $N=2^{n}$
+\end_inset
+
+, where 
+\begin_inset Formula $n$
+\end_inset
+
+ is an integer.
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ is typically taken as a power of two, which enables to determine the crosscorre
+lation in the frequency domain via the fast Fourier transform (FFT).
+ If we furthermore assume that the value of 
+\begin_inset Formula $N=32$
+\end_inset
+
+, with an image size of 
+\begin_inset Formula $NR\times NC$
+\end_inset
+
+ pixels, where 
+\begin_inset Formula $NR\times NC$
+\end_inset
+
+ being the number of rows and columns in the digital image.
+ Each image pair is divided into non-overlapping 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ sub-windows, then, applying the two-dimensional crosscorrelation of each
+ sub-window, where the crosscorrelation function is defined as 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+R(s,t)=\frac{1}{N^{2}}\sum_{i=0}^{N-1}\sum_{j=0}^{N-1}F_{I,J}^{'}(i,j)F_{I,J}^{''}(i+s,j+t)\label{eq:CrosscorrelationFunction}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $F^{'}$
+\end_inset
+
+ and 
+\begin_inset Formula $F^{''}$
+\end_inset
+
+ is the first and second image of the image pair, 
+\begin_inset Formula $R$
+\end_inset
+
+ is the cyclic crosscorrelation between sub-window 
+\begin_inset Formula $I,J$
+\end_inset
+
+, 
+\begin_inset Formula $i,j$
+\end_inset
+
+ is the pixel location within the sub-window 
+\begin_inset Formula $I,J$
+\end_inset
+
+ and 
+\begin_inset Formula $s,t$
+\end_inset
+
+ being the 
+\begin_inset Formula $2D$
+\end_inset
+
+ cyclic lag where the crosscorrelation is being computed.
+ Since 
+\begin_inset Formula $R$
+\end_inset
+
+ is often computed in the spectral domain, equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:CrosscorrelationFunction"
+
+\end_inset
+
+) can be rewritten as 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+R(s,t)=\mathcal{F}^{-1}\left[\mathcal{F}^{\star}\left\{ F_{I,J}^{'}(i,j)\right\} \mathcal{F}\left\{ F_{I,J}^{''}(i+s,j+t)\right\} \right]\label{eq:FastFourierTransform}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ is the Fourier transform, 
+\begin_inset Formula $\mathcal{F}^{-1}$
+\end_inset
+
+ is the inverse Fourier transform and 
+\begin_inset Formula $\mathcal{F}^{\star}$
+\end_inset
+
+ is complex conjugate.
+\end_layout
+
+\begin_layout Subsubsection
+PIV: History
+\end_layout
+
+\begin_layout Plain Layout
+PIV means the 
+\emph on
+accurate, quantitative measurement of fluid velocity vectors at a very large
+ number of points simultaneously
+\emph default
+.
+ In 1977, three groups of researchers Barker & Fourney (1977), Dudderar
+ & Simpkins (1977) and Grousson & Mallick (1977), independently achieved
+ to make such measurements by the method of Laser Speckle Velocimetry (LSV),
+ which was at that time originally developed for application in the field
+ of solid mechanics.
+ They demonstrated how to measure the fluid velocity field by measuring
+ the parabolic velocity profile for a laminar flow in a tube, by using a
+ double exposure photographs in combination with laser illuminated planar
+ light sheet and interrogation by forming Young's interference fringes from
+ multiple pairs of displaced laser speckles in small interrogation spots
+ on the specklegrams.
+ Between 1979-1983, a young phd student (Meynart) showed many practical
+ applications in both laminar and turbulent fluid flows by the method of
+ LSV.
+ This gained strong interest from the fluid mechanics community.
+ 
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/PIVmultiFrame.png
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+In 1984, the first important explicit recognition of particle images was
+ made in two contemporaneous papers by Pickering & Halliwell (1984) and
+ Adrian (1984) who argued that by illuminating fluid flows by light sheet
+ would rarely if ever produce speckle patterns in the image plane.
+ The image plane would instead have images of individual particles.
+ This was the first time the term PIV was proposed in the literature with
+ the purpose to distinguish it of operation method from LSV.
+ A simple criterion was made to distinguish the occurrence of the one mode
+ or the other by defining a dimensionless parameter called the source density,
+ which basically is mean number of particles in a volume of resolution and
+ one can express the number of overlapping images in the image plane in
+ terms of it.
+ Many turbulence researchers realized the promising ability PIV offered
+ to study the structure of turbulent flows and this consequently strongly
+ influenced in which direction this method would be developed.
+ Turbulence is characterized by its random chaotic motion making it impossible
+ do determine the direction of the flow.
+ Also the velocities and accelerations are high which implies to use very
+ small particles typically few microns in diameter, in order to be able
+ to follow these fluctuating acceleration.
+ The tiny light scattering cross section of these particles suggest the
+ use of high intensity illumination.
+ To capture images of very fine particles without blurring required short
+ exposure time and the use of high intensity pulsed laser with a light sheet
+ illuminating particles with diameter ranging from few microns in gases
+ to tens of microns in liquids.
+ The energy needed to illuminate and to produce clear images of fine particles
+ was a major issue in PIV.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+From Laser Doppler Velocimetry, researchers had a good understanding of
+ light scattering and appropriate particle sizes needed to follow turbulent
+ flows.
+ Using Mie scattering theory one could show that the energy pulsed lasers
+ generated would was enough to obtain good photographic images from particles
+ wit a few microns in in air and 
+\begin_inset Formula $10-30\mu m$
+\end_inset
+
+ particles in water.
+ This led to the next major step in PIV technique, which was to use high-resolut
+ion (300 line/mm) film with double-pulsed solid-state lasers.
+ This would produce excellent double exposure photos of particles .
+ The first users of Nd:Yag was in 1986 (Kompenhans & Reichmuth ).
+ Nd:Yag lasers became widely available came compactly with dual oscillator
+ packages and self-contained cooling supplies, which became essential in
+ all PIV systems.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/nd-yag-directindustry.jpg
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The use of autocorrelation of double exposure images of many particles in
+ a small interrogation spots appeared in two papers Sutton et al.
+ 1983, Adrian & Yao 1984.
+ This was to replace measuring the spacing and orientation of Young’s fringes
+ that form from illuminating such spots.
+ Both approaches was related by Fourier transform, with the measurement
+ based on the sharp signal peak in the correlation plane.
+ The idea was to divide the entire image into usually overlapping interrogation
+ spots, and interrogate the particle images in each spot to extract the
+ mean mean displacement within each interrogation cell, consisting of interrogat
+ion spot area 
+\begin_inset Formula $A_{I}$
+\end_inset
+
+ and the thickness of the light sheet 
+\begin_inset Formula $\Delta z_{0}$
+\end_inset
+
+ .Analysis of the autocorrelation method (Keane & Adrian 1992) led to a new
+ definition regarding a second dimensionless number, called the image density.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/PIVdensity.png
+	scale 33
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The greatest challenge of PIV in the first decade was the interrogation
+ of images due to the lack of computer power available.
+ A typical computer in many fluid laboratories had 128 KB of RAM and 30
+ MB hard drive which is the data in a RAM space at the same minimum file
+ size used by a current word processor.
+ To perform a 2D Fourier transform or autocorrelation was practically impossible
+ with those computers.
+ One of the most important evolution in the PIV technique was the move from
+ photographic recordings to video recordings in the early 90's.
+ This improved the usability profoundly and consequently gained the popularity
+ of PIV.
+ It was then clear that digital imaging would be the future standard of
+ PIV at some point in.
+ The next major development was in 1994 when a group of researchers Lorenzo
+ et al.
+ convinced Kodak to develop interline transfer cameras that could record
+ two rapidly successive pictures by transferring the first picture recorded
+ by each pixel on to an on-chip storage well, and then record a.
+ These new cameras enabled three particularly important improvements.
+ Firstly, crosscorrelation could not be conveniently implemented without
+ these new cameras, and theoretically it was known that crosscorrelation
+ of images recorded separately of the first and second exposures was superior
+ to the autocorrelation of double exposures (Keane and Adrian 1992).
+ Second, with the crosscorrelation cameras, the need of image shifting was
+ eliminated because the order of the exposures automatically determined
+ the direction of the flow.
+ Third and most important was the elimination of small displacement image
+ overlap which made it possible for a wide dynamical range.
+ These cameras had a major influence in the development of PIV.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+From 1993-2000 many papers on PIV where published all with the goal of extending
+ interrogation methods and high image density.
+ At the same time many development occurred on the optical side.
+ Stereographic imaging was used early to make photogrammetric measurements
+ by tracking particles in volumes Guezennec et al.
+ 1994, Dracos et al.
+ 1993, Maas et al.
+ 1993, Kasagi & Nishino 1993.
+ Stereographic PIV solves the issue of perspective error, it also gives
+ the third velocity component, and it has proven to be a practical generalizatio
+n of monoscopic PIV.
+ A 3D photogrammetric measurement yields around 
+\begin_inset Formula $10^{4}$
+\end_inset
+
+ vectors in a cubic volume, corresponding to 20 vector sample points per
+ side.
+ After some post processing, the PIV measurement is only equivalent to sampling
+ on a regular 
+\begin_inset Formula $7\times7\times7$
+\end_inset
+
+ grid, which is sufficient only for the study of laminar or two phase flow,
+ but not good enough for turbulence.
+ These limitation stimulated many efforts to make volumetric PIV measurement
+ from holographic recording.
+ Holographic recording enables to isolate one plane at a time, and thus
+ eliminate the particle image overlap problem.
+ Various research groups (Meng & Hussain 1991, Barnhart et al.
+ 1994; Royer 1997; Trolinger et al.
+ 1997, suggested that the upwards of 106 regularly spaced vectors can be
+ obtained using off-axis recording, which corresponds to a regular grid
+ of about 
+\begin_inset Formula $100\times100\times100$
+\end_inset
+
+, making it as good as in planar PIV.
+ However, the holographic approach is not widely used mainly because it
+ is expensive, it also requires considerable skills in operation, and third
+ it is impossible to realistically record enough holograms to give stable
+ turbulence statistics.
+ This would change significantly if digital optical recording media became
+ available with sufficient resolution and sensitivity.
+ Current digital cameras are adequate for very small volume, in particular
+ microscopic inline holography has shown considerable promise (Jian et al.
+ 2003).
+ Application of PIV to micro-scale flows Santiago et al.
+ 1998 reduced the typical PIV measurement volume from 1 mm to 10 microns
+ and less.
+ This is a remarkable increase of two-orders of magnitude in spatial resolution
+ which is achieved at the cost of reduction of the field-of-view by a correspond
+ing amount, and provides a useful new tool for microfluidics.
+\end_layout
+
+\begin_layout Subsubsection
+PIV: The Present
+\end_layout
+
+\begin_layout Plain Layout
+Today, PIV is widely used in experimental fluid mechanics.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+PIV: Applications
+\end_layout
+
+\begin_layout Subsubsection
+PIV: The Future 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Section
+Temporary Notes
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\nabla$"
+description "differential"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v\cdot\nabla v\neq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Plain Layout
+Density:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\rho=1\frac{g}{cm^{3}}=10^{-6}\frac{\mu g}{\mu m^{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+Pa=1\cdot\frac{N}{m^{2}}=1\cdot\frac{kg}{m\cdot s^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+Pa\cdot s=\frac{kg}{m^{2}}=\frac{10^{9}\mu g}{10^{12}\mu m}=10^{-3}\left[\frac{\mu g}{\mu m}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+1m=10^{6}\mu m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+1m^{2}=10^{12}\mu m^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+1kg=1000000000mcg=1\cdot10^{9}mcg
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+1kg=10^{6}mcl
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+N=\frac{kg\cdot m}{s^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Dynamic viscosity: 
+\begin_inset Formula 
+\[
+\mu_{d}=1.002\cdot10^{-3}\left[\frac{N\cdot s}{m^{2}}\right]=1.002\cdot10^{-3}\frac{kg\cdot m}{s^{2}}\frac{s}{m^{2}}=1.002\cdot10^{-3}\frac{kg}{s\cdot m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mu_{d}=1.002\cdot10^{-3}\frac{1\cdot10^{9}mcg}{s\cdot10^{6}\mu m}=1.002\frac{mcg}{s\cdot\mu m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mu_{d}=1.002\cdot10^{-3}\frac{N\cdot s}{m^{2}}=1.002\cdot10^{-3}\frac{10^{6}mcl}{s\cdot10^{6}\mu m}=1.002\cdot10^{-3}\frac{mcl}{s\cdot\mu m}=1.002\cdot10^{-9}\frac{mcl}{\mu s\cdot\mu m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mu_{d}=1.002\cdot10^{3}\mu pa\cdot s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mu_{d}=1.002\cdot10^{-6}\frac{mcg}{\mu s\cdot\mu m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Kinematic viscosity:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu=1.004\cdot10^{-6}\frac{m^{2}}{s}=1.004\cdot10^{6}\frac{\mu m^{2}}{s}=1.004\cdot10^{6}\frac{\mu m^{2}}{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{m^{2}}{s}]=\mu_{d}[pa\cdot s]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{10^{-12}m^{2}}{s}]=\mu_{d}[\frac{N}{m^{2}}\cdot s]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{10^{-12}m^{2}}{s}]=\mu_{d}\left[\frac{kg}{10^{-12}m^{2}\cdot s}\cdot s\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{10^{-12}m^{2}}{s}]=\mu_{d}\left[\frac{10^{12}kg}{m^{2}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{\mu m^{2}}{s}]=\mu_{d}[\mu N\cdot s]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{\mu m^{2}}{s}]=\mu_{d}[\frac{kg\cdot m}{s^{2}}\cdot s]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu=\frac{\mu}{\rho}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mu_{d}=1.002\cdot10^{-3}\frac{N\cdot s}{m^{2}}=1.002\cdot10^{-3}\frac{kg\cdot m}{s^{2}}\cdot\frac{s}{m^{2}}=1.002\cdot10^{-3}\frac{kg}{s\cdot m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{10^{12}\mu m^{2}}{s}]=\frac{1.002\cdot10^{-3}\mu_{d}[10^{3}\frac{\mu g}{s\cdot\mu m}]}{\rho\left[10^{-6}\frac{\mu g}{\mu m^{3}}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{10^{12}\mu m^{2}}{s}]=1.002\cdot10^{6}\frac{\mu_{d}[\frac{\mu g}{s\cdot\mu m}]}{\rho\left[\frac{\mu g}{\mu m^{3}}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{10^{6}\mu m^{2}}{s}]=\frac{\mu_{d}[\frac{\mu g}{s\cdot\mu m}]}{\rho\left[\frac{\mu g}{\mu m^{3}}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{10^{12}\mu m^{2}}{s}]\rho\left[10^{-6}\frac{\mu g}{\mu m^{3}}\right]=1.002\cdot10^{-3}\mu_{d}[10^{3}\frac{\mu g}{s\cdot\mu m}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The constant 
+\begin_inset Formula $C$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+This whole master thesis boiled down to find singel 
+\end_layout
+
+\begin_layout Subsection
+Microsecond
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+p_{0}=101.325\frac{\mu g}{\mu m^{2}\cdot s}=101.325\frac{\mu g}{\mu m^{2}\cdot s}=1.0132\cdot10^{-4}\frac{\mu g}{\mu m^{2}\cdot\mu s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{10^{6}\mu m^{2}}{s}]=\frac{\mu_{d}[\frac{\mu g}{s\cdot\mu m}]}{\rho\left[\frac{\mu g}{\mu m^{3}}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu[\frac{\mu m^{2}}{\mu s}]=\frac{\mu_{d}[10^{-6}\frac{\mu g}{\mu s\cdot\mu m}]}{\rho\left[\frac{\mu g}{\mu m^{3}}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+C=u\frac{\Delta t}{\Delta x}\leq C_{max}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+C_{maks}=2\cdot u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+u\frac{\Delta t}{\Delta x}\leq2\cdot u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{\Delta t}{2}\leq\Delta x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{\mu_{d}[\frac{\mu g}{s\cdot\mu m}]}{\rho\left[\frac{\mu g}{\mu m^{3}}\right]}=\frac{\mu_{d}[\frac{\mu m^{2}}{s\cdot}]}{\rho\left[\frac{}{}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+http://www.wolframalpha.com/input/?i=kinematic+viscosity+of+water+in+micrometer2%2
+Fmicrosecond 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nu=8.9\cdot10^{-7}\frac{m^{2}}{s}=0.89\frac{\mu m^{2}}{\mu s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+http://www.wolframalpha.com/input/?i=dynamic+viscosity+of+water+in+microgram%2F%28
+microsecond*micrometer%29
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mu=8.9\cdot10^{4}Pa\cdot s=8.9\cdot10^{-7}\frac{\mu g}{\mu s\cdot\mu m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+?
+\end_layout
+
+\begin_layout Itemize
+CFL FEM+DFM
+\end_layout
+
+\begin_layout Itemize
+Womersley number : 
+\begin_inset Formula $\Omega=a\sqrt{\frac{\omega\rho}{\mu}}=a\sqrt{\frac{\omega}{\nu}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+projection vs interpolation
+\end_layout
+
+\begin_layout Itemize
+trilinos vs petsc.
+ 
+\end_layout
+
+\begin_layout Itemize
+illustrasjoner
+\end_layout
+
+\begin_layout Itemize
+If turbulence, would you get exactly the same results on two consecutive
+ runs.
+ Randomness? 
+\end_layout
+
+\begin_layout Plain Layout
+Probably the fundamental difference is Trilinos tries to provide an environment
+ for solving FEM problems and PETSc provides an environment for solving
+ sparse linear algebra problems.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+seuthesis
+\end_layout
+
+\begin_layout Standard
+tandfx
+\end_layout
+
+\begin_layout Standard
+ugost2008n
+\end_layout
+
+\begin_layout Standard
+iEEEtranSA
+\end_layout
+
+\begin_layout Standard
+abbrv-letters
+\end_layout
+
+\begin_layout Standard
+aipauth4-1
+\end_layout
+
+\begin_layout Standard
+apalike-fr !!
+\end_layout
+
+\begin_layout Standard
+This would diverge immediately and kill the run.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "adrian2005twenty"
+
+\end_inset
+
+just an exaggerated illustration because the mesh is in micrometers and
+ the velocity in
+\begin_inset CommandInset citation
+LatexCommand cite
+key "logg2012automated"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Omega$
+\end_inset
+
+ 
+\begin_inset Formula $\partial\Omega$
+\end_inset
+
+ 
+\begin_inset Formula $\boldsymbol{n}dS$
+\end_inset
+
+ 
+\begin_inset Formula $\Omega(t)$
+\end_inset
+
+ 
+\begin_inset Formula $\partial\Omega(t)$
+\end_inset
+
+ 
+\begin_inset Formula $dS$
+\end_inset
+
+ 
+\begin_inset Formula $S(t)$
+\end_inset
+
+ 
+\begin_inset Formula $S(t+\Delta t)$
+\end_inset
+
+ 
+\begin_inset Formula $\boldsymbol{u}$
+\end_inset
+
+
+\begin_inset Formula $V(t)$
+\end_inset
+
+ 
+\begin_inset Formula $V(t+\Delta t)$
+\end_inset
+
+ 
+\begin_inset Formula $\rho$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "MasterCite"
+options "apalike-letters"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

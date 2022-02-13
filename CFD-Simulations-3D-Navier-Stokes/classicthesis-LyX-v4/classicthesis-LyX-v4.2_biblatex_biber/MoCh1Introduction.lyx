@@ -1,0 +1,895 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass classicthesis
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Direct numerical simulation (DNS) is the branch of Computational Fluid Dynamics
+ (CFD) dedicated to high-end solutions of turbulence flows governed by the
+ Navier-Stokes equations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "coleman2010primer"
+
+\end_inset
+
+.
+ Compared to conventional CFD solvers, DNS resolves the Navier-Stokes equations
+ explicitly rather than closure modeling like the Reynolds averaged Navier-Stoke
+s (RANS) or Large eddy simulation (LES) where sub-grid scale modeling is
+ necessary in order to include the smallest, unresolved eddies.
+ The greatest strength of DNS is its ability to provide a complete and detailed
+ knowledge of the turbulence flow at any given time and point in space,
+ without leaning on any approximation.
+ It captures the whole range of turbulence, from the smallest scales (Kolmogorov
+ micro-scales) associated with dissipation, to the largest integral length
+ scale 
+\begin_inset Formula $L$
+\end_inset
+
+ associated with the kinetic energy.
+ DNS is an ideal method for turbulence research.
+ However, these promising abilities comes at a high price; extreme computational
+ cost and severe restriction on the maximum Reynolds number.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The purpose of this master thesis is to carefully run DNS simulations in
+ an effort to reproduce the experimental data in a recent study 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kolaas2013visualization"
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+This study was conducted at the Microfluidics Laboratory at SINTEF MiNaLab,
+ as a joint project with the Hydrodynamics laboratory at the University
+ of Oslo.
+ 
+\end_layout
+
+\end_inset
+
+.
+ The main objective in this study was to investigate the kinematic properties
+ of flow in silicon micro-channels by the method of particle tracking velocimetr
+y PTV.
+ Both stationary and pulsatile flows was generated in two different rectangularl
+y Y-shaped geometries; with and without an expanded bifurcation fig.().
+ Distinct difference in the flow regimes where found between the geometries,
+ where flow separation was observed only for the geometry with the expanded
+ bifurcation at 
+\begin_inset Formula $\textrm{Re}=84$
+\end_inset
+
+.
+ The chosen geometries in the experiment was motivated from biomedical flow
+ in order to emulate blood flow in a capillary bifurcation with an aneurysm.
+ An aneurysm occurs when the walls between a capillary bifurcation weakens
+ and gradually expand to form a balloon like sac.
+ In most cases an aneurysm goes unnoticed without any symptoms, but in rare
+ cases an aneurysm that is formed in the brain may rapture and cause serious
+ and life threatening conditions like stroke, where the blood is released
+ into the skull.
+ Although these rectangularly rigid walled geometries are not realistic
+ compared to real life blood flow in capillaries, they give a good comparison
+ to the numerical results.
+ 
+\begin_inset Newline newline
+\end_inset
+
+The governing equations are discretized spatially by the finite element
+ method (FEM) and temporally by fractional step methods.
+ The simulations are performed with FEniCS a software designed to automate
+ the solution of differential equations based on the FEM.
+ In particular, we will use Oasis a high performance and a highly versatile
+ Navier-Stokes solver based on the building blocks from the FEniCS project.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+To this end we address these following problem statements: 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Find the appropriate value of the resistance coefficient 
+\begin_inset Formula $C$
+\end_inset
+
+ in the resistance boundary condition (RBC) such that the ratio of the outflows
+ converge to a reasonable number, and we get a similar streamline pattern
+ comparable to the experiment.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+In which way does the chosen method and mesh resolution influence the computatio
+nal costs? 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+The Navier-Stokes equations will always results in solving a large number
+ of sparse linear systems 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "segal2012finite"
+
+\end_inset
+
+.
+ In general, the solution of these systems and the storage of the corresponding
+ matrices takes the major part of the resources in terms of CPU time and
+ memory.
+ How can we make the solution methods more efficient.
+ (a review)
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+Discrepancies between experiments and simulations?
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+A complete documentation for this master can be found here:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset CommandInset href
+LatexCommand href
+target "https://bitbucket.org/MoHoushmand/master-thesis"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Organization
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Literature review
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Microfluidics
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Microfluidics is a multidisciplinary scientific field of systems that process
+ or manipulate minuscule amount of fluids, typically in the range of 
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+ to 
+\begin_inset Formula $10^{-12}$
+\end_inset
+
+ 
+\begin_inset Formula $\mu\textrm{L}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lin2011microfluidics"
+
+\end_inset
+
+.
+ As a technology, microfluidic offers many advantages and useful capabilities;
+ the ability to use small samples and reagents, low cost, short analysis
+ time, small footprints, and being capable to carry out separation and detection
+ with high resolution and sensitivity.
+ Initially, this technology was developed to manufacture microprocessors
+ and to miniaturize transistors, which would later make it possible to produce
+ microscopic channels and integrate them on chips.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The first lab on chip (LOC) analysis system was first proposed by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "terry1979gas"
+
+\end_inset
+
+, where a miniature gas analysis system was built based on the principles
+ of gas chromatography.
+ The major components was fabricated in silicon using photolithography and
+ chemical etching techniques, which allowed at that time, size reductions
+ of nearly three orders of magnitude compared to conventional laboratory
+ instruments.
+ Photolithography is a process used in micro-fabrication
+\emph on
+ 
+\emph default
+where light is used to transfer a geometric pattern from a photo-stencil
+ to a light-sensitive chemical photoresist on to a substrate.
+ Further chemical processing then either engraves or deposes to achieve
+ desired pattern on the material of choice.
+ Although, originally developed for chromatograph and expected for applications
+ in the areas of portable ambient air quality monitors, planetary probes,
+ this would later turn out to intersect many scientific fields 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sackmann2014present"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The development of chemical and biological weapons during the cold war was
+ countered by the US Defense to fund and support a series of programs with
+ the main target of developing microfluidic systems designed to function
+ as detectors for these threats 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "whitesides2006origins"
+
+\end_inset
+
+.
+ These programs were the main source for the rapid growth of academic microfluid
+ic technology.
+ In the 80's, a new type of device emerged called Micro Electro Mechanical
+ Systems or MEMS, based on silicon etching procedures developed for microelectro
+nics industry.
+ This development made it possible to manufacture the first device containing
+ movable micro-elements integrated on a silicon wafer, giving rise to applicatio
+ns in the fields of pressure sensors and printer heads.
+ Many researchers started to investigated in the applications of MEMS and
+ started to develop laboratories on a chip which would enable the integration
+ of almost all diagnostic operations performed in a hospital on a single
+ microfluidic chip.
+ The majority of microfluidic devices were still made of either silicon
+ or glass which required the heavy infrastructure of the microelectronics
+ industry.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Starting millennium, technologies based on molding micro-channels in polymers
+ such as PDMS grew gradually and started to replace microfluidic devices
+ made of silicon or glass.
+ Cost and production time of these decreased and enabled a large number
+ of laboratories to conduct researches in microfluidics.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+For biological sample analysis, microfluidic devices made on silicon or
+ glass appears to be unsuitable or inappropriate.
+ Especially silicon is expensive.
+ It also is opaque to UV and visible light, making it inappropriate for
+ conventional optical methods for detection.
+ Neither glass or silicon has all the required properties for work with
+ living mammalian cells, in particular, the permeability to gases is required.
+\end_layout
+
+\end_inset
+
+ Many exploratory microfluidics research has been done with polymer, mainly
+ PDMS, which has distinct properties from those of silicone.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Thousands of researchers are today working with microfluidics to extend
+ its application fields, particularly towards biomedicine, biology and chemistry.
+ Two especially important contributions in the fabrication process of microfluid
+ic devices are soft lithography in PDMS, and pneumatically activated pumps,
+ valves and mixers based on soft-lithographic procedures.
+ These method have shortened the fabrication process of prototypes dramatically.
+ In particular, quake’s pneumatic valves has been important as they have
+ made it possible to design and examine complicated devices, which in turn
+ opened up a number of areas of applications.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+With new fabrication methods, microfluidics has revealed some fundamental
+ differences between fluid flow in large channels and those in micro-channels.
+ The most important differences are are seen in turbulence; in macro scale
+ flow, fluids mix convectively, e.g.
+ milk stirred in coffee suggests that inertia is typically more important
+ then viscosity.
+ However, when water is used as fluid in micro-channels, the opposite appears
+ to be true; fluids does not mix convectively.
+ In fact, when to fluids streams together in micro-channels, they flow in
+ a parallel stream where turbulence and eddies are absent.
+ The only mixing is due to molecular diffusion across the interface between
+ those fluids.
+ One particularly important parameter in the study of fluid flow is the
+ Reynolds number.
+ This number represents the ratio of inertial forces to viscous forces and
+ gives an indication of whether a flow is laminar or turbulent 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "langtangen2002numerical"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\textrm{Re}=\frac{uL}{\nu}\label{eq:Re}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $u$
+\end_inset
+
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$u$"
+description "Velocity component"
+
+\end_inset
+
+is the maximum velocity, 
+\begin_inset Formula $L$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$l$"
+description "Characteristic length scale"
+
+\end_inset
+
+ is the characteristic length scale and 
+\begin_inset Formula $\nu$
+\end_inset
+
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\nu$"
+description "Kinematic viscocity"
+
+\end_inset
+
+is the kinematic viscosity.
+ Other important equations to be mentioned are: 
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Particle Tracking Velocimetry (PTV)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+With particle image velocimetry(PIV) one aims to make accurate and quantitative
+ measurement of the fluid velocity vectors at a very large number of points
+ simultaneously 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "adrian2005twenty"
+
+\end_inset
+
+.
+ In 1977, three groups of researchers independently achieved to make such
+ measurements by the method of Laser Speckle Velocimetry (LSV), [Barker
+ and Fourney, 1977], [Dudderar and Simpkins, 1977], [Grousson and Mallic,
+ 1977], which was originally developed for application in the field of solid
+ mechanics.
+ They demonstrated how to measure the fluid velocity field by measuring
+ the parabolic velocity profile for a laminar flow in a tube, by using a
+ double exposure photographs in combination with laser illuminated planar
+ light sheet and interrogation by forming Young's interference fringes from
+ multiple pairs of displaced laser speckles in small interrogation spots
+ on the specklegrams.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+A young phd student [Meynart, 1979-1983] showed many practical applications
+ in both laminar and turbulent fluid flows by the method of LSV.
+ This gained strong interest from the fluid mechanics community.
+ In 1984, the first important explicit recognition of particle images was
+ made in two contemporaneous papers by [Pickering and Halliwell, 1984],
+ [Adrian, 1984], who argued that by illuminating fluid flows by light sheet
+ would rarely if ever produce speckle patterns in the image plane.
+ The image plane would instead have images of individual particles.
+ This was the first time the term PIV was proposed in the literature with
+ the purpose to distinguish it from LSV.
+ A simple criterion was made to distinguish the occurrence of the one mode
+ or the other by defining a dimensionless parameter called the source density,
+ which basically is the mean number of particles in a volume of resolution,
+ and one can express the number of overlapping images in the image plane
+ in terms of it.
+ Many turbulence researchers realized the promising ability PIV offered
+ to study the structure of turbulent flows and this consequently strongly
+ influenced in which direction PIV would be developed.
+ Turbulence is characterized by its random chaotic motion making it impossible
+ to determine the direction of the flow.
+ Also the velocities and accelerations are high which implies to use very
+ small particles, typically few microns in diameter in order to be able
+ to follow these fluctuating acceleration.
+ The tiny light scattering cross section of these particles suggest the
+ use of high intensity illumination.
+ To capture images of very fine particles without blurring required short
+ exposure time and high intensity pulsed laser with a light sheet illuminating
+ particles with diameter ranging from few microns in gases to tens of microns
+ in liquids.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Many velocimetry techniques have been developed to characterize microfluidic
+ systems with the order of micrometers or less in spatial resolutions.
+ Two especially important techniques are micron-resolution Particle Image
+ Velocimetry (
+\begin_inset Formula $\mu$
+\end_inset
+
+PIV) and particle-tracking velocimetry (PTV).
+ 
+\begin_inset Formula $\mu$
+\end_inset
+
+PIV is considered as independent from conventional macroscopic PIV or PTV
+ methods, and is widely recognized as a reliable microfluidic velocimetry
+ technique.
+ Both 
+\begin_inset Formula $\mu$
+\end_inset
+
+PIV and PTV techniques applies tracer particles suspended in the fluid,
+ with a digital camera to acquire the displacement of suspended particles
+ over time, but there are distinct differences between these two techniques.
+ Particle displacement in PIV is determined by cross-correlation techniques
+ for an interrogation region within an image pair where high particle densities
+ are commonly a characteristic of PIV.
+ With PTV, particle displacements are determined by typically tracking single
+ particles with its nearest matching neighbor.
+ To avoid particle misidentification, particle seeding densities are typically
+ low with PTV techniques.
+ For nanoscale fluid mechanics, PIV methods are more desirable due to the
+ high particle seeding density and the avoidance of Brownian motion.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Extensive reviews of PTV and PIV techniques and its applications have been
+ proposed by [Adrian, 1991, 1996, 2005], [Sinton, 2004], [Raffel et al.,
+ 2007] and [Lindken et al., 2009].
+ Compared to macroscopic PIV, 
+\begin_inset Formula $\mu$
+\end_inset
+
+PIV has considerably different mechanical and optical configurations.
+ In order to enhance the signal and overcome diffraction effects caused
+ by small particle size, typically 
+\begin_inset Formula $<1\mu\textrm{m}$
+\end_inset
+
+, fluorescent imaging is typically used .
+ By using a microscope equipped with proper optics, the resolution can be
+ improved to less than one micrometer.
+ Another distinct difference is that in 
+\begin_inset Formula $\mu$
+\end_inset
+
+PIV, a volume illumination is used, while in macroscopic PIV a light sheet
+ illumination is common.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Experimental setup
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The micro channel chip was manufactured in 
+\begin_inset Formula $500\mu\textrm{m}$
+\end_inset
+
+ thick polished silicon wafer with 
+\begin_inset Formula $6\,\textrm{inch}(15.24\textrm{cm})$
+\end_inset
+
+ in diameter.
+ The structure of the micro-channels consisted of a rectangular cross-sections
+ with a nominal depth of 
+\begin_inset Formula $185\mu\textrm{m}$
+\end_inset
+
+ arranged in a Y-bifurcation layout, with the inflow from left to right.
+ The width of the inlet was 
+\begin_inset Formula $400\mu\textrm{m}$
+\end_inset
+
+ , while the smallest outlet was 
+\begin_inset Formula $100\mu m$
+\end_inset
+
+ wide with an exit angle 
+\begin_inset Formula $\alpha_{1}=45^{o}$
+\end_inset
+
+ relative to the inlet, and the second outlet with a width of 
+\begin_inset Formula $400\mu m$
+\end_inset
+
+ with an exit angle 
+\begin_inset Formula $\alpha_{2}=80^{o}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/epje/ArtChip.png
+	scale 16.5
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+The base frame and the geometry of the silicon channel in a custom made
+ which enables easy change of chip.
+ The chip size with channel geometry is 20 × 40 mm.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArtChip"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kolaas2013visualization"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename /Users/Mo/Documents/repos/master-thesis/Graphics/epje/ArtSetup.png
+	scale 15
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Experimental setup showing flow generator, valves, channel geometry and
+ outlet reservoir.
+ The small outlets from the main channel can be used as pressure taps.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ArtSetup"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kolaas2013visualization"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Microfluidic chip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+A custom made frame where build to hold the silicon chip and to enable easy
+ connection to other equipment and to quickly change the shape of the geometry
+ fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ArtChip"
+
+\end_inset
+
+.
+ The flow was driven by a programable syringe pump, not powerful enough
+ to create a periodic time-dependent flow within the recording length of
+ the camera.
+ Alternatively, two valves were used to either send or bypass the flow through
+ the bifurcation, where both outlets were connected through a confluence
+ to ensure equal pressure condition on the outlets before ending in a pipe
+ above a sink (atmospheric pressure condition).
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+As a light source for PTV and visualization, a metal halide lamp was used
+ for fluorescence illumination of the particles, with power enough to capture
+ at 1000 fps with a high speed video camera at a volume flow rate sufficiently
+ for velocity measurement.
+ At higher flow rates a pulsating light source was used to avoid streaks
+ in the images acquired.
+ For the recordings, a high speed video camera of CMOS type with maximum
+ resolution of 
+\begin_inset Formula $1024×1024$
+\end_inset
+
+ pixels at 
+\begin_inset Formula $1000$
+\end_inset
+
+ fps and a pixel size of 
+\begin_inset Formula $17\mu m$
+\end_inset
+
+ was used together with an motorized Olympus BX61 microscope, and a 
+\begin_inset Formula $20×$
+\end_inset
+
+ magnification lens allowing to step the focus in the z-directions using
+ microscope control software.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The flow was seeded with a invitrogen red fluorescent particles (F8851)
+ 
+\begin_inset Formula $1\mu m$
+\end_inset
+
+ diluted with deionized water at the volume ratio 
+\begin_inset Formula $1:1333$
+\end_inset
+
+ with a concentration of 
+\begin_inset Formula $3.6\cdot10^{6}$
+\end_inset
+
+ particles/ ml.
+ The highest flow rates was seeded with Duke scientific green fluorescent
+ 
+\begin_inset Formula $4.8\mu m$
+\end_inset
+
+ (
+\begin_inset Formula $5\mu m$
+\end_inset
+
+ nominal) particles (G0500) with a volume ratio of 
+\begin_inset Formula $1:133$
+\end_inset
+
+ and a concentration of 
+\begin_inset Formula $1.6\cdot10^{5}$
+\end_inset
+
+ particles/ml.
+ 
+\end_layout
+
+\end_body
+\end_document
